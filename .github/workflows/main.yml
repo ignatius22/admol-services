@@ -19,5 +19,5 @@ jobs:
         server: ftp.admolservices.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        local-dir: ./public_html  # Specify the local directory to deploy
+        local-dir: ./  # Specify the local directory to deploy
         server-dir: /public_html  # Ensure this matches your server's public_html folder
