@@ -2082,3 +2082,336 @@ input:focus {
     padding: 20px; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Custom UI/UX Improvements */
+html {
+  scroll-behavior: smooth;
+}
+.uza-btn {
+  transition: all 0.3s ease-in-out !important;
+}
+.uza-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(21, 131, 233, 0.4);
+}
+
+/* UI REVAMP - Modern Hero & Flat Cards */
+.welcome-area, .welcome-slides .single-welcome-slide {
+  height: 100vh !important;
+  min-height: 600px;
+}
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-overlay {
+  position: relative;
+  z-index: 1;
+}
+.bg-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  z-index: -1;
+}
+.welcome-text h2 {
+  font-size: 64px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+.welcome-text h5 {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #f1f1f1 !important;
+}
+.single-service-area {
+  border-radius: 0 !important;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  box-shadow: none !important;
+  transition: all 0.3s ease;
+  padding: 40px 30px;
+}
+.single-service-area:hover {
+  border-color: #1583e9;
+  transform: translateY(-5px);
+}
+.uza-btn {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.uza-btn:hover {
+  background-color: #0d5aa6 !important;
+  border-color: #0d5aa6 !important;
+  transform: translateY(0) !important;
+}
+.single-portfolio-slide, .single-portfolio-slide img {
+  border-radius: 0 !important;
+}
+
+/* Typography & Section Refinements */
+.section-padding-80 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #303030;
+}
+.section-heading p {
+  font-size: 18px;
+  color: #707070;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+.about-us-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.about-us-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Header Refinement */
+.nav-brand {
+    transition: all 0.3s ease;
+}
+.nav-brand:hover {
+    opacity: 0.8;
+}
+.classynav ul li a {
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Portfolio Overlay Revamp */
+.overlay-effect {
+  background-color: rgba(21, 131, 233, 0.9) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.overlay-effect h4 {
+  color: #fff !important;
+  font-weight: 700;
+}
+.overlay-effect p {
+  color: #fff !important;
+  opacity: 0.9;
+}
+
+/* Explicit Hero Text Fixes */
+.welcome-area .welcome-slides .single-welcome-slide .welcome-text h2 {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.welcome-area .welcome-slides .single-welcome-slide .welcome-text h2 span {
+  color: #1583e9 !important;
+}
+.welcome-area .welcome-slides .single-welcome-slide .welcome-text h5 {
+  color: #ffffff !important;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure overlay is on top of image but behind text */
+.bg-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: transparent !important;
+}
+.bg-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Adjusted opacity for better balance */
+  z-index: -1;
+}
+
+/* Logo & Header Sticky Styles */
+.header-area.sticky .nav-brand {
+    color: #1583e9 !important;
+}
+.header-area .nav-brand {
+    color: #ffffff !important; /* White by default on the hero */
+}
+/* If the header is NOT sticky but we are on index.html, it should be white */
+.welcome-area + .header-area .nav-brand {
+    color: #ffffff !important;
+}
+
+/* Ensure nav links are white on hero but blue/dark on sticky */
+.header-area .classynav ul li a {
+    color: #ffffff !important;
+}
+.header-area.sticky .classynav ul li a {
+    color: #303030 !important;
+}
+.header-area.sticky .classynav ul li a:hover {
+    color: #1583e9 !important;
+}
+
+/* Breadcrumb visibility fix for fixed header */
+.breadcrumb-area {
+  padding-top: 80px; /* Adjust based on header height */
+  height: auto !important;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background for consistency */
+}
+.breadcrumb-bg-curve {
+  opacity: 0.5; /* Subtle curves */
+}
+
+/* Final Global UI Refinements */
+section {
+  position: relative;
+  overflow: hidden;
+}
+.uza-btn.btn-2 {
+  background-color: #1583e9;
+  color: #ffffff;
+  border: none;
+  padding: 15px 35px;
+}
+.uza-btn.btn-2:hover {
+  background-color: #0d5aa6;
+}
+
+/* Global Footer Revamp - Dark Theme */
+.footer-area {
+  background-color: #1a1a1a !important;
+  color: #d1d1d1 !important;
+}
+.footer-area h4.widget-title {
+  color: #ffffff !important;
+  font-weight: 700;
+  border-bottom: 2px solid #1583e9;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+.footer-area .footer-content h3 {
+  color: #1583e9 !important;
+}
+.footer-area .footer-content p, 
+.footer-area .single-footer-widget p, 
+.footer-area .copywrite-text p {
+  color: #b0b0b0 !important;
+}
+.footer-area a {
+  color: #d1d1d1 !important;
+  transition: all 0.3s ease;
+}
+.footer-area a:hover {
+  color: #1583e9 !important;
+}
+.footer-area .our-link li a::before {
+  color: #1583e9 !important;
+}
+.footer-social-info a {
+  background-color: #333 !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social-info a:hover {
+  background-color: #1583e9 !important;
+}
+.footer-area .border-line {
+  border-top: 1px solid #333;
+}
+
+
+/* Team Section Refinement */
+.single-team-slide {
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+.single-team-slide:hover {
+  border-color: #1583e9;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.single-team-slide .overlay-effect {
+  background-color: rgba(21, 131, 233, 0.85) !important;
+}
+.single-team-slide .team-social-info a {
+  border-radius: 0 !important;
+}
+
+/* FINAL BUTTONS FIX - Unified Flat Style */
+.uza-btn, .uza-btn.btn-2, .uza-btn.btn-3 {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    transition: all 0.4s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 55px !important;
+    padding: 0 40px !important;
+    font-size: 15px !important;
+    cursor: pointer !important;
+    min-width: 180px !important;
+}
+
+/* Primary / Solid Style (btn-2) */
+.uza-btn.btn-2, .uza-btn {
+    background-color: #1583e9 !important;
+    color: #ffffff !important;
+    border: 2px solid #1583e9 !important;
+}
+.uza-btn.btn-2:hover, .uza-btn:hover {
+    background-color: #0d5aa6 !important;
+    border-color: #0d5aa6 !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Outline Style (btn-3) */
+.uza-btn.btn-3 {
+    background-color: transparent !important;
+    color: #1583e9 !important;
+    border: 2px solid #1583e9 !important;
+}
+.uza-btn.btn-3:hover {
+    background-color: #1583e9 !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Fix for buttons inside sections */
+.mt-30 { margin-top: 30px !important; }
+.mt-15 { margin-top: 15px !important; }

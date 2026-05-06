@@ -52,7 +52,7 @@
       type="image/x-icon"
     />
 
-    <title>Admol | Services</title>
+    
 
     <!-- <link rel="icon" href="img/core-img/favicon.ico" /> -->
 
@@ -72,151 +72,15 @@
         ]
       }
     </script>
-    <script nonce="f15fb33f-9870-46a8-b3b6-ac40df5999a2">
-      try {
-        (function (w, d) {
-          !(function (j, k, l, m) {
-            if (j.zaraz) console.error("zaraz is loaded twice");
-            else {
-              j[l] = j[l] || {};
-              j[l].executed = [];
-              j.zaraz = { deferred: [], listeners: [] };
-              j.zaraz._v = "5774";
-              j.zaraz.q = [];
-              j.zaraz._f = function (n) {
-                return async function () {
-                  var o = Array.prototype.slice.call(arguments);
-                  j.zaraz.q.push({ m: n, a: o });
-                };
-              };
-              for (const p of ["track", "set", "debug"])
-                j.zaraz[p] = j.zaraz._f(p);
-              j.zaraz.init = () => {
-                var q = k.getElementsByTagName(m)[0],
-                  r = k.createElement(m),
-                  s = k.getElementsByTagName("title")[0];
-                s && (j[l].t = k.getElementsByTagName("title")[0].text);
-                j[l].x = Math.random();
-                j[l].w = j.screen.width;
-                j[l].h = j.screen.height;
-                j[l].j = j.innerHeight;
-                j[l].e = j.innerWidth;
-                j[l].l = j.location.href;
-                j[l].r = k.referrer;
-                j[l].k = j.screen.colorDepth;
-                j[l].n = k.characterSet;
-                j[l].o = new Date().getTimezoneOffset();
-                if (j.dataLayer)
-                  for (const w of Object.entries(
-                    Object.entries(dataLayer).reduce(
-                      (x, y) => ({ ...x[1], ...y[1] }),
-                      {}
-                    )
-                  ))
-                    zaraz.set(w[0], w[1], { scope: "page" });
-                j[l].q = [];
-                for (; j.zaraz.q.length; ) {
-                  const z = j.zaraz.q.shift();
-                  j[l].q.push(z);
-                }
-                r.defer = !0;
-                for (const A of [localStorage, sessionStorage])
-                  Object.keys(A || {})
-                    .filter((C) => C.startsWith("_zaraz_"))
-                    .forEach((B) => {
-                      try {
-                        j[l]["z_" + B.slice(7)] = JSON.parse(A.getItem(B));
-                      } catch {
-                        j[l]["z_" + B.slice(7)] = A.getItem(B);
-                      }
-                    });
-                r.referrerPolicy = "origin";
-                r.src =
-                  "https://preview.colorlib.com/cdn-cgi/zaraz/s.js?z=" +
-                  btoa(encodeURIComponent(JSON.stringify(j[l])));
-                q.parentNode.insertBefore(r, q);
-              };
-              ["complete", "interactive"].includes(k.readyState)
-                ? zaraz.init()
-                : j.addEventListener("DOMContentLoaded", zaraz.init);
-            }
-          })(w, d, "zarazData", "script");
-          window.zaraz._p = async (eX) =>
-            new Promise((eY) => {
-              if (eX) {
-                eX.e &&
-                  eX.e.forEach((eZ) => {
-                    try {
-                      const e$ = d.querySelector("script[nonce]"),
-                        fa = e$?.nonce || e$?.getAttribute("nonce"),
-                        fb = d.createElement("script");
-                      fa && (fb.nonce = fa);
-                      fb.innerHTML = eZ;
-                      fb.onload = () => {
-                        d.head.removeChild(fb);
-                      };
-                      d.head.appendChild(fb);
-                    } catch (fc) {
-                      console.error(`Error executing script: ${eZ}\n`, fc);
-                    }
-                  });
-                Promise.allSettled(
-                  (eX.f || []).map((fd) => fetch(fd[0], fd[1]))
-                );
-              }
-              eY();
-            });
-          zaraz._p({ e: ["(function(w,d){})(window,document)"] });
-        })(window, document);
-      } catch (e) {
-        throw (fetch("/cdn-cgi/zaraz/t"), e);
-      }
-    </script>
+    
   </head>
   <body>
-    <div id="preloader">
-      <div class="wrapper">
-        <div class="cssload-loader"></div>
-      </div>
-    </div>
-
-    <div class="top-search-area">
-      <div
-        class="modal fade"
-        id="searchModal"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="btn close-btn" data-dismiss="modal">
-                <i class="fa fa-times"></i>
-              </button>
-
-              <form action="#" method="post">
-                <input
-                  type="search"
-                  name="top-search-bar"
-                  class="form-control"
-                  placeholder="Search and hit enter..."
-                />
-                <button type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <header class="header-area">
       <div class="main-header-area">
         <div class="classy-nav-container breakpoint-off">
           <nav class="classy-navbar justify-content-between" id="uzaNav">
-            <a class="nav-brand" href="index.html">
-              <!-- <img src="img/core-img/logo.png" alt/> -->
-            </a>
+            <a class="nav-brand" href="index.html" style="font-size: 24px; font-weight: bold; display: flex; align-items: center;">Admol Services</a>
 
             <div class="classy-navbar-toggler">
               <span class="navbarToggler"
@@ -234,10 +98,9 @@
               <div class="classynav">
                 <ul id="nav">
                   <li><a href="index.html">Home</a></li>
-                  <li class="current-item">
-                    <a href="portfolio.html">Portfolio</a>
-                  </li>
                   <li><a href="about.html">About</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li class="current-item"><a href="portfolio.html">Portfolio</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div>
@@ -256,7 +119,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                    <a href="#"><i class="fa fa-home"></i> Home</a>
+                    <a href="index.html"><i class="fa fa-home"></i> Home</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
                     Portfolio
@@ -269,20 +132,13 @@
       </div>
 
       <div class="breadcrumb-bg-curve">
-        <img src="img/core-img/curve-5.png" alt />
+        <img src="img/core-img/curve-5.png" alt="" />
       </div>
     </div>
 
     <section class="uza-portfolio-area section-padding-80">
       <div class="portfolio-menu text-center mb-80">
-        <button class="btn active" data-filter="*">All Portfolio</button>
-        <!-- <button class="btn" data-filter=".ux-ui-design">UX/UI Design</button>
-        <button class="btn" data-filter=".market-analytics">
-          Market Analytics
-        </button>
-        <button class="btn" data-filter=".marketing-social">
-          Marketing Social
-        </button> -->
+        <button class="btn uza-btn btn-3 active" data-filter="*">All Installations</button>
       </div>
       <div class="container-fluid">
         <div class="row uza-portfolio">
@@ -290,18 +146,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item ux-ui-design"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p10.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p10.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>UX/UI Design</h4>
+                <h4>Residential Solar Power Setup</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  High-efficiency solar solutions for modern homes.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -310,18 +165,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item market-analytics"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p11.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p11.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>Market Analytics</h4>
+                <h4>Commercial Inverter & Battery Installation</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Reliable backup power for businesses.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -330,18 +184,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item ux-ui-design"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p14.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p14.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>UX/UI Design</h4>
+                <h4>Off-Grid Solar Solution for Farmhouse</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Clean energy for remote locations.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -350,18 +203,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item market-analytics"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p16.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p16.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>Market Analytics</h4>
+                <h4>Industrial Power Backup System</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Robust energy storage for industrial use.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -370,18 +222,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item ux-ui-design"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p15.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p15.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>UX/UI Design</h4>
+                <h4>Residential Solar Power Setup</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Switch to clean energy and save on bills.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -390,18 +241,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item market-analytics"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p3.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p3.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>Market Analytics</h4>
+                <h4>Commercial Inverter & Battery Installation</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Professional energy solutions for your office.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -410,18 +260,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item marketing-social"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p4.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p4.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>Marketing Social</h4>
+                <h4>Off-Grid Solar Solution for Farmhouse</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Reliable power anywhere, anytime.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -430,18 +279,17 @@
             class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item marketing-social"
           >
             <div class="single-portfolio-slide">
-              <img src="img/bg-img/p6.jpg" alt />
+              <img loading="lazy" src="img/bg-img/p6.jpg" alt="" />
 
               <div class="overlay-effect">
-                <!-- <h4>Marketing Social</h4>
+                <h4>Industrial Power Backup System</h4>
                 <p>
-                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  gubergren no sea takimata sanctus est
-                </p> -->
+                  Large scale energy systems for industry.
+                </p>
               </div>
 
               <div class="view-more-btn">
-                <a href="#"><i class="arrow_right"></i></a>
+                <a href="portfolio-single.html"><i class="arrow_right"></i></a>
               </div>
             </div>
           </div>
@@ -453,38 +301,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="uza-newsletter-area">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="nl-content mb-80">
-              <h2>Subscribe to our Newsletter</h2>
-              <p>
-                Subscribe our newsletter gor get notification about new updates,
-                etc...
-              </p>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-5">
-            <div class="nl-form mb-80">
-              <form action="#" method="post">
-                <input
-                  type="email"
-                  name="nl-email"
-                  value
-                  placeholder="Your Email"
-                />
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-line"></div>
-      </div>
-    </section> -->
 
     <footer class="footer-area section-padding-80-0">
       <div class="container">
@@ -531,7 +347,6 @@
                 <ul class="our-link">
                   <li><a href="#">Customer Support</a></li>
                   <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Media &amp; Press</a></li>
                   <li><a href="#">Our Team</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
@@ -550,45 +365,55 @@
               </p>
 
               <div class="copywrite-text mb-30">
-                <p>&copy; Copyright 2024 <a href="#">AdmolServices</a>.</p>
+                <p>&copy; Copyright 2024 <a href="index.html">Admol Services</a>. All rights reserved.</p>
               </div>
 
               <div class="footer-social-info">
                 <a
-                  href="#"
+                  href="https://facebook.com"
                   class="facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Facebook"
                   ><i class="fa fa-facebook"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://twitter.com"
                   class="twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Twitter"
                   ><i class="fa fa-twitter"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://pinterest.com"
                   class="pinterest"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Pinterest"
                   ><i class="fa fa-pinterest"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://instagram.com"
                   class="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Instagram"
                   ><i class="fa fa-instagram"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://youtube.com"
                   class="youtube"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="YouTube"
@@ -597,19 +422,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row" style="margin-bottom: 30px">
-          Copyright &copy;
-          <script
-            data-cfasync="false"
-            src="https://preview.colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-          ></script>
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          <!-- All rights reserved | This template is made with
-          <i class="fa fa-heart-o" aria-hidden="true"></i> by
-          <a href="https://colorlib.com/" target="_blank">Colorlib</a> -->
         </div>
       </div>
     </footer>
@@ -646,5 +458,5 @@
     ></script>
   </body>
 
-  <!-- Mirrored from preview.colorlib.com/theme/uza/portfolio.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2024 22:37:21 GMT -->
+  
 </html>

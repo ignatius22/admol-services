@@ -52,7 +52,7 @@
       type="image/x-icon"
     />
 
-    <title>Admol | Services</title>
+    
 
     <!-- <link rel="icon" href="img/core-img/favicon.ico" /> -->
 
@@ -72,153 +72,15 @@
         ]
       }
     </script>
-    <script nonce="f15fb33f-9870-46a8-b3b6-ac40df5999a2">
-      try {
-        (function (w, d) {
-          !(function (j, k, l, m) {
-            if (j.zaraz) console.error("zaraz is loaded twice");
-            else {
-              j[l] = j[l] || {};
-              j[l].executed = [];
-              j.zaraz = { deferred: [], listeners: [] };
-              j.zaraz._v = "5774";
-              j.zaraz.q = [];
-              j.zaraz._f = function (n) {
-                return async function () {
-                  var o = Array.prototype.slice.call(arguments);
-                  j.zaraz.q.push({ m: n, a: o });
-                };
-              };
-              for (const p of ["track", "set", "debug"])
-                j.zaraz[p] = j.zaraz._f(p);
-              j.zaraz.init = () => {
-                var q = k.getElementsByTagName(m)[0],
-                  r = k.createElement(m),
-                  s = k.getElementsByTagName("title")[0];
-                s && (j[l].t = k.getElementsByTagName("title")[0].text);
-                j[l].x = Math.random();
-                j[l].w = j.screen.width;
-                j[l].h = j.screen.height;
-                j[l].j = j.innerHeight;
-                j[l].e = j.innerWidth;
-                j[l].l = j.location.href;
-                j[l].r = k.referrer;
-                j[l].k = j.screen.colorDepth;
-                j[l].n = k.characterSet;
-                j[l].o = new Date().getTimezoneOffset();
-                if (j.dataLayer)
-                  for (const w of Object.entries(
-                    Object.entries(dataLayer).reduce(
-                      (x, y) => ({ ...x[1], ...y[1] }),
-                      {}
-                    )
-                  ))
-                    zaraz.set(w[0], w[1], { scope: "page" });
-                j[l].q = [];
-                for (; j.zaraz.q.length; ) {
-                  const z = j.zaraz.q.shift();
-                  j[l].q.push(z);
-                }
-                r.defer = !0;
-                for (const A of [localStorage, sessionStorage])
-                  Object.keys(A || {})
-                    .filter((C) => C.startsWith("_zaraz_"))
-                    .forEach((B) => {
-                      try {
-                        j[l]["z_" + B.slice(7)] = JSON.parse(A.getItem(B));
-                      } catch {
-                        j[l]["z_" + B.slice(7)] = A.getItem(B);
-                      }
-                    });
-                r.referrerPolicy = "origin";
-                r.src =
-                  "https://preview.colorlib.com/cdn-cgi/zaraz/s.js?z=" +
-                  btoa(encodeURIComponent(JSON.stringify(j[l])));
-                q.parentNode.insertBefore(r, q);
-              };
-              ["complete", "interactive"].includes(k.readyState)
-                ? zaraz.init()
-                : j.addEventListener("DOMContentLoaded", zaraz.init);
-            }
-          })(w, d, "zarazData", "script");
-          window.zaraz._p = async (eX) =>
-            new Promise((eY) => {
-              if (eX) {
-                eX.e &&
-                  eX.e.forEach((eZ) => {
-                    try {
-                      const e$ = d.querySelector("script[nonce]"),
-                        fa = e$?.nonce || e$?.getAttribute("nonce"),
-                        fb = d.createElement("script");
-                      fa && (fb.nonce = fa);
-                      fb.innerHTML = eZ;
-                      fb.onload = () => {
-                        d.head.removeChild(fb);
-                      };
-                      d.head.appendChild(fb);
-                    } catch (fc) {
-                      console.error(`Error executing script: ${eZ}\n`, fc);
-                    }
-                  });
-                Promise.allSettled(
-                  (eX.f || []).map((fd) => fetch(fd[0], fd[1]))
-                );
-              }
-              eY();
-            });
-          zaraz._p({ e: ["(function(w,d){})(window,document)"] });
-        })(window, document);
-      } catch (e) {
-        throw (fetch("/cdn-cgi/zaraz/t"), e);
-      }
-    </script>
+    
   </head>
   <body>
-    <div id="preloader">
-      <div class="wrapper">
-        <div class="cssload-loader"></div>
-      </div>
-    </div>
-
-    <!-- <div class="top-search-area">
-      <div
-        class="modal fade"
-        id="searchModal"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <button type="button" class="btn close-btn" data-dismiss="modal">
-                <i class="fa fa-times"></i>
-              </button>
-
-              <form
-             
-              >
-                <input
-                  type="search"
-                  name="top-search-bar"
-                  class="form-control"
-                  placeholder="Search and hit enter..."
-                />
-                <button type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <header class="header-area">
       <div class="main-header-area">
         <div class="classy-nav-container breakpoint-off">
           <nav class="classy-navbar justify-content-between" id="uzaNav">
-            <a class="nav-brand" href="index.html">
-              <!-- <img src="img/core-img/logo.png" alt/> -->
-            </a>
+            <a class="nav-brand" href="index.html" style="font-size: 24px; font-weight: bold; display: flex; align-items: center;">Admol Services</a>
 
             <div class="classy-navbar-toggler">
               <span class="navbarToggler"
@@ -236,8 +98,9 @@
               <div class="classynav">
                 <ul id="nav">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
                   <li class="current-item"><a href="about.html">About</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div>
@@ -256,7 +119,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                    <a href="#"><i class="fa fa-home"></i> Home</a>
+                    <a href="index.html"><i class="fa fa-home"></i> Home</a>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
                     About
@@ -269,7 +132,7 @@
       </div>
 
       <div class="breadcrumb-bg-curve">
-        <img src="img/core-img/curve-5.png" alt />
+        <img src="img/core-img/curve-5.png" alt="" />
       </div>
     </div>
 
@@ -278,19 +141,14 @@
         <div class="row align-items-center">
           <div class="col-12 col-lg-6">
             <div class="about-us-thumbnail mb-80">
-              <img src="img/bg-img/2.jpg" alt />
-
-              <div class="uza-video-area hi-icon-effect-8">
-                <a href="#" class="hi-icon video-play-btn"
-                  ><i class="fa fa-play" aria-hidden="true"></i
-                ></a>
-              </div>
+              <img loading="lazy" src="img/bg-img/welcome-pic.jpg" alt="About Admol Services" />
             </div>
           </div>
 
           <div class="col-12 col-lg-6">
             <div class="section-heading mb-5">
-              <h2>Our Mission</h2>
+              <h2>Who We Are</h2>
+              <p>Admol Services is a leading provider of solar energy and power backup solutions in Nigeria, committed to providing clean, reliable, and affordable energy for homes and businesses.</p>
             </div>
             <div class="about-us-content mb-80">
               <div class="about-tab-area">
@@ -360,7 +218,7 @@
                         installation will be completed with precision and care,
                         setting the foundation for long-term energy savings.
                       </p>
-                      <a href="#" class="btn uza-btn mt-30">Learn More</a>
+                      <a href="contact.html" class="btn uza-btn btn-2 mt-30">Learn More</a>
                     </div>
                   </div>
                   <div
@@ -382,7 +240,7 @@
                         products, ensuring that every project meets the highest
                         standards of excellence.
                       </p>
-                      <a href="#" class="btn uza-btn mt-30">Discover Quality</a>
+                      <a href="contact.html" class="btn uza-btn btn-2 mt-30">Discover Quality</a>
                     </div>
                   </div>
                   <div
@@ -403,9 +261,7 @@
                         Our customized services ensure that your investment in
                         clean energy is optimized for the best possible results.
                       </p>
-                      <a href="#" class="btn uza-btn mt-30"
-                        >Explore Customization</a
-                      >
+                      <a href="contact.html" class="btn uza-btn btn-2 mt-30">Explore Customization</a>
                     </div>
                   </div>
                 </div>
@@ -416,7 +272,7 @@
       </div>
 
       <div class="about-bg-pattern">
-        <img src="img/core-img/curve-2.png" alt />
+        <img loading="lazy" src="img/core-img/curve-2.png" alt="" />
       </div>
     </section>
 
@@ -460,7 +316,7 @@
 
           <div class="col-12 col-lg-6">
             <div class="choose-us-thumbnail mb-80">
-              <img
+              <img loading="lazy"
                 class="w-100"
                 src="img/bg-img/solar_power.jpg"
                 alt="Solar Power Installation"
@@ -476,8 +332,8 @@
         <div class="row">
           <div class="col-12">
             <div class="section-heading text-center">
-              <h2>Team of Experts</h2>
-              <p>We stay on top of our industry by being experts in yours.</p>
+              <h2>Our Leadership</h2>
+              <p>Dedicated to powering your world with clean, sustainable energy.</p>
             </div>
           </div>
         </div>
@@ -487,12 +343,12 @@
           <div class="col-4 col-md-4 col-sm-12"></div>
           <div class="col-4 col-md-4 col-sm-12">
             <div class="single-team-slide">
-              <img src="img/bg-img/ceo.jpeg" alt />
+              <img loading="lazy" src="img/bg-img/ceo.jpeg" alt="" />
 
               <div class="overlay-effect">
                 <h6>CEO</h6>
                 <h4>Ademola Adedeji</h4>
-                <p>Founder and CEO of AdmolServices</p>
+                <p>Founder and CEO of Admol Services</p>
               </div>
 
               <div class="team-social-info">
@@ -559,188 +415,6 @@
         </div>
       </div>
     </div>
-    <!-- 
-    <div class="clients-feedback-area section-padding-0-80 clearfix">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="testimonial-slides owl-carousel">
-              <div class="single-testimonial-slide d-flex align-items-center">
-                <div class="testimonial-thumbnail">
-                  <img src="img/bg-img/7.jpg" alt />
-                </div>
-
-                <div class="testimonial-content">
-                  <h4>
-                    “Colorlib Ltd’s ranking has gone up so much from the great
-                    work that your team has done and our brand get organic sales
-                    consistently from your efforts. We are happy that the
-                    results of your efforts were lasting and profitable.”
-                  </h4>
-
-                  <div class="ratings">
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                  </div>
-
-                  <div class="author-info">
-                    <h5>Darrell Goodman <span>- CEO colorlib</span></h5>
-                  </div>
-
-                  <div class="quote-icon">
-                    <img src="img/core-img/quote.png" alt />
-                  </div>
-                </div>
-              </div>
-
-              <div class="single-testimonial-slide d-flex align-items-center">
-                <div class="testimonial-thumbnail">
-                  <img src="img/bg-img/23.jpg" alt />
-                </div>
-
-                <div class="testimonial-content">
-                  <h4>
-                    “Colorlib Ltd’s ranking has gone up so much from the great
-                    work that your team has done and our brand get organic sales
-                    consistently from your efforts. We are happy that the
-                    results of your efforts were lasting and profitable.”
-                  </h4>
-
-                  <div class="ratings">
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                  </div>
-
-                  <div class="author-info">
-                    <h5>Darrell Goodman <span>- CEO colorlib</span></h5>
-                  </div>
-
-                  <div class="quote-icon">
-                    <img src="img/core-img/quote.png" alt />
-                  </div>
-                </div>
-              </div>
-
-              <div class="single-testimonial-slide d-flex align-items-center">
-                <div class="testimonial-thumbnail">
-                  <img src="img/bg-img/24.jpg" alt />
-                </div>
-
-                <div class="testimonial-content">
-                  <h4>
-                    “Colorlib Ltd’s ranking has gone up so much from the great
-                    work that your team has done and our brand get organic sales
-                    consistently from your efforts. We are happy that the
-                    results of your efforts were lasting and profitable.”
-                  </h4>
-
-                  <div class="ratings">
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                    <i class="icon_star"></i>
-                  </div>
-
-                  <div class="author-info">
-                    <h5>Darrell Goodman <span>- CEO colorlib</span></h5>
-                  </div>
-
-                  <div class="quote-icon">
-                    <img src="img/core-img/quote.png" alt />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="uza-cf-area section-padding-80-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-cf-area d-flex align-items-center mb-80">
-              <h2><span class="counter">90</span></h2>
-              <div class="cf-text">
-                <h6>Projects<br />Completed</h6>
-              </div>
-              <div class="bg-icon"><i class="icon_piechart"></i></div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-cf-area d-flex align-items-center mb-80">
-              <h2><span class="counter">120</span></h2>
-              <div class="cf-text">
-                <h6>Happy<br />clients</h6>
-              </div>
-              <div class="bg-icon"><i class="icon_heart_alt"></i></div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-cf-area d-flex align-items-center mb-80">
-              <h2><span class="counter">50</span></h2>
-              <div class="cf-text">
-                <h6>WEB<br />awards</h6>
-              </div>
-              <div class="bg-icon"><i class="icon_book_alt"></i></div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-cf-area d-flex align-items-center mb-80">
-              <h2><span class="counter">20</span></h2>
-              <div class="cf-text">
-                <h6>Our<br />experts</h6>
-              </div>
-              <div class="bg-icon"><i class="icon_profile"></i></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <section class="uza-newsletter-area">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="nl-content mb-80">
-              <h2>Subscribe to our Newsletter</h2>
-              <p>
-                Subscribe our newsletter gor get notification about new updates,
-                etc...
-              </p>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-5">
-            <div class="nl-form mb-80">
-              <form action="#" method="post">
-                <input
-                  type="email"
-                  name="nl-email"
-                  value
-                  placeholder="Your Email"
-                />
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-line"></div>
-      </div>
-    </section> -->
-
     <footer class="footer-area section-padding-80-0">
       <div class="container">
         <div class="row justify-content-between">
@@ -786,7 +460,6 @@
                 <ul class="our-link">
                   <li><a href="#">Customer Support</a></li>
                   <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Media &amp; Press</a></li>
                   <li><a href="#">Our Team</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
@@ -805,45 +478,55 @@
               </p>
 
               <div class="copywrite-text mb-30">
-                <p>&copy; Copyright 2024 <a href="#">AdmolServices</a>.</p>
+                <p>&copy; Copyright 2024 <a href="index.html">Admol Services</a>. All rights reserved.</p>
               </div>
 
               <div class="footer-social-info">
                 <a
-                  href="#"
+                  href="https://facebook.com"
                   class="facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Facebook"
                   ><i class="fa fa-facebook"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://twitter.com"
                   class="twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Twitter"
                   ><i class="fa fa-twitter"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://pinterest.com"
                   class="pinterest"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Pinterest"
                   ><i class="fa fa-pinterest"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://instagram.com"
                   class="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Instagram"
                   ><i class="fa fa-instagram"></i
                 ></a>
                 <a
-                  href="#"
+                  href="https://youtube.com"
                   class="youtube"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="YouTube"
@@ -852,19 +535,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row" style="margin-bottom: 30px">
-          Copyright &copy;
-          <script
-            data-cfasync="false"
-            src="https://preview.colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-          ></script>
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          <!-- All rights reserved | This template is made with
-          <i class="fa fa-heart-o" aria-hidden="true"></i> by
-          <a href="https://colorlib.com/" target="_blank">Colorlib</a> -->
         </div>
       </div>
     </footer>
@@ -901,5 +571,5 @@
     ></script>
   </body>
 
-  <!-- Mirrored from preview.colorlib.com/theme/uza/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Aug 2024 22:37:10 GMT -->
+  
 </html>
