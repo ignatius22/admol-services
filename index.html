@@ -205,6 +205,47 @@
         40% {transform: translateY(-10px) translateX(-50%);}
         60% {transform: translateY(-5px) translateX(-50%);}
       }
+
+      /* WhatsApp Floating Button */
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        left: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        color: #fff;
+      }
+
+      /* Counter Section */
+      .uza-cf-area {
+        background-color: #f8f9fa;
+      }
+      .single-cf-text h2 {
+        font-size: 40px;
+        color: #1583e9;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+      .single-cf-text p {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: #303030;
+      }
     </style>
     
   </head>
@@ -212,39 +253,7 @@
 
 
 
-    <header class="header-area">
-      <div class="main-header-area">
-        <div class="classy-nav-container breakpoint-off">
-          <nav class="classy-navbar justify-content-between" id="uzaNav">
-            <a class="nav-brand" href="index.html" style="font-size: 24px; font-weight: bold; display: flex; align-items: center;">Admol Services</a>
-
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"
-                ><span></span><span></span><span></span
-              ></span>
-            </div>
-
-            <div class="classy-menu">
-              <div class="classycloseIcon">
-                <div class="cross-wrap">
-                  <span class="top"></span><span class="bottom"></span>
-                </div>
-              </div>
-
-              <div class="classynav">
-                <ul id="nav">
-                  <li class="current-item"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <header class="header-area" id="header-placeholder"></header>
 
     <section class="welcome-area">
       <!-- Video Background -->
@@ -323,6 +332,48 @@
         <img loading="lazy" src="img/core-img/curve-2.png" alt="" />
       </div>
     </section>
+
+    <!-- Counter Area Start -->
+    <div class="uza-cf-area section-padding-80-0">
+      <div class="container">
+        <div class="row">
+          
+          <!-- Single Counter -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-cf-text text-center mb-80">
+              <h2><span class="counter">500</span>+</h2>
+              <p>Homes Powered</p>
+            </div>
+          </div>
+
+          <!-- Single Counter -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-cf-text text-center mb-80">
+              <h2><span class="counter">120</span>+</h2>
+              <p>Business Solutions</p>
+            </div>
+          </div>
+
+          <!-- Single Counter -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-cf-text text-center mb-80">
+              <h2><span class="counter">15</span>k+</h2>
+              <p>Panels Installed</p>
+            </div>
+          </div>
+
+          <!-- Single Counter -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single-cf-text text-center mb-80">
+              <h2><span class="counter">100</span>%</h2>
+              <p>Clean Energy</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Counter Area End -->
 
     <section class="admol-services-area section-padding-80-0">
       <div class="container">
@@ -530,237 +581,86 @@
       <div class="portfolio-bg-curve">
         <img loading="lazy" src="img/core-img/curve-3.png" alt="" />
       </div>
-    </section>
+    <!-- Portfolio Area End -->
 
-    <section class="uza-blog-area">
-      <div class="blog-bg-curve">
-        <img loading="lazy" src="img/core-img/curve-4.png" alt="" />
-      </div>
-
-      <div class="uza-cta-area section-padding-0-80">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-8">
-              <div class="cta-content mb-80">
-                <h2>Interested in working with us?</h2>
-                <h6>Hit the button below or give us a call!</h6>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="cta-content mb-80">
-                <div class="call-now-btn">
-                  <a href="#"><span>Call us now:</span> (+234)9060704168</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="container">
+    <!-- Testimonial Area Start -->
+    <section class="uza-testimonial-area section-padding-80">
+      <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="section-heading text-center">
-              <h2>Our Latest Blogs</h2>
-              <p>Hit the button below or give us a call!</p>
+              <h2>What Our Clients Say</h2>
+              <p>Trusted by homeowners and businesses across Nigeria for reliable energy solutions.</p>
             </div>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-12 col-lg-4">
-            <div
-              class="single-blog-post bg-img mb-80"
-              style="background-image: url(img/PHOTO-4.jpg)"
-            >
-              <div class="post-content">
-                <span class="post-date"><span>23</span> August, 2018</span>
-                <a href="#" class="post-title"
-                  >SEO: The Movie By Ignite Visibility</a
-                >
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing esed diam
-                  nonumy eirmod tempor invidunt ut
-                </p>
-                <a href="#" class="read-more-btn"
-                  >Read More <i class="arrow_carrot-2right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-lg-4">
-            <div
-              class="single-blog-post bg-img mb-80"
-              style="background-image: url(img/PHOTO-5.jpg)"
-            >
-              <div class="post-content">
-                <span class="post-date"><span>13</span> December, 2018</span>
-                <a href="#" class="post-title"
-                  >What Curling Irons Are The Best Ones</a
-                >
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing esed diam
-                  nonumy eirmod tempor invidunt ut
-                </p>
-                <a href="#" class="read-more-btn"
-                  >Read More <i class="arrow_carrot-2right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-lg-4">
-            <div
-              class="single-blog-post bg-img mb-80"
-              style="background-image: url(img/PHOTO-6.jpg)"
-            >
-              <div class="post-content">
-                <span class="post-date"><span>08</span> July, 2018</span>
-                <a href="#" class="post-title"
-                  >Amazon REV Workshop: Road to Seattle</a
-                >
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing esed diam
-                  nonumy eirmod tempor invidunt ut
-                </p>
-                <a href="#" class="read-more-btn"
-                  >Read More <i class="arrow_carrot-2right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section>
-
-    <footer class="footer-area section-padding-80-0">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-80">
-              <h4 class="widget-title">Contact Us</h4>
-
-              <div class="footer-content mb-15">
-                <h3>(+234)9060704168</h3>
-                <p>
-                  Beside Abc transport, utako, Abuja <br />
-                  <a href="mailto:info@admolservices.com"
-                    >info@admolservices.com</a
-                  >
-                </p>
-              </div>
-              <p class="mb-0">
-                Mon - Fri: 9:00 - 19:00 <br />
-                Closed on Weekends
-              </p>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-80">
-              <h4 class="widget-title">Quick Link</h4>
-
-              <nav>
-                <ul class="our-link">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-80">
-              <h4 class="widget-title">Resources</h4>
-
-              <nav>
-                <ul class="our-link">
-                  <li><a href="#">Customer Support</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-80">
-              <h4 class="widget-title">About Us</h4>
-              <p>
-                AdmolServices specializes in high-quality solar panel
-                installations, inverter setups, and solar panel sales. We are
-                committed to delivering efficient and reliable energy solutions
-                for homes and businesses.
-              </p>
-
-              <div class="copywrite-text mb-30">
-                <p>&copy; Copyright <span id="displayYear"></span> <a href="index.html">Admol Services</a>. All rights reserved.</p>
+          <div class="col-12">
+            <div class="testimonial-slides owl-carousel">
+              
+              <!-- Single Testimonial -->
+              <div class="single-testimonial-slide d-flex align-items-center">
+                <div class="testimonial-thumbnail">
+                  <img src="img/PHOTO-4.jpg" alt="">
+                </div>
+                <div class="testimonial-content">
+                  <h4>“Admol Services transformed our home. We no longer worry about power outages, and our electricity bills have dropped by 60%. Highly professional team!”</h4>
+                  <div class="testimonial-author-info">
+                    <h5>Chidi Eze</h5>
+                    <p>Homeowner in Abuja</p>
+                  </div>
+                </div>
               </div>
 
-              <div class="footer-social-info">
-                <a
-                  href="https://facebook.com"
-                  class="facebook"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Facebook"
-                  ><i class="fa fa-facebook"></i
-                ></a>
-                <a
-                  href="https://twitter.com"
-                  class="twitter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Twitter"
-                  ><i class="fa fa-twitter"></i
-                ></a>
-                <a
-                  href="https://pinterest.com"
-                  class="pinterest"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Pinterest"
-                  ><i class="fa fa-pinterest"></i
-                ></a>
-                <a
-                  href="https://instagram.com"
-                  class="instagram"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a
-                  href="https://youtube.com"
-                  class="youtube"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="YouTube"
-                  ><i class="fa fa-youtube-play"></i
-                ></a>
+              <!-- Single Testimonial -->
+              <div class="single-testimonial-slide d-flex align-items-center">
+                <div class="testimonial-thumbnail">
+                  <img src="img/PHOTO-5.jpg" alt="">
+                </div>
+                <div class="testimonial-content">
+                  <h4>“The inverter system installed by Admol is seamless. My business stays running 24/7 without the noise and cost of a diesel generator. Best investment yet.”</h4>
+                  <div class="testimonial-author-info">
+                    <h5>Mrs. Bola Ahmed</h5>
+                    <p>CEO, Ahmed Boutiques</p>
+                  </div>
+                </div>
               </div>
+
+              <!-- Single Testimonial -->
+              <div class="single-testimonial-slide d-flex align-items-center">
+                <div class="testimonial-thumbnail">
+                  <img src="img/PHOTO-6.jpg" alt="">
+                </div>
+                <div class="testimonial-content">
+                  <h4>“Excellent after-sales support. They didn't just install and leave; they've been helpful with maintenance tips. Highly recommended for anyone going solar.”</h4>
+                  <div class="testimonial-author-info">
+                    <h5>Engr. Samuel Okon</h5>
+                    <p>Industrial Plant Manager</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
+    <!-- Testimonial Area End -->
+
+    <!-- Newsletter & Footer Start -->
+    <footer id="footer-placeholder"></footer>
 
     <!-- Scroll to Top -->
     <a href="#" id="scrollUp" style="position: fixed; z-index: 2147483647; display: block;"><i class="fa fa-angle-up"></i></a>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2349060704168" class="whatsapp-float" target="_blank">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+
     <script src="js/jquery.min.js"></script>
+    <script src="js/load-partials.js"></script>
 
     <script src="js/popper.min.js"></script>
 

@@ -12,48 +12,71 @@
 
 <link rel="icon" href="img/core-img/favicon.ico">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
+<style>
+  .service-section {
+    padding: 100px 0;
+  }
+  .service-section:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  .service-image-box {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+  .service-image-box img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  .service-section:hover .service-image-box img {
+    transform: scale(1.05);
+  }
+  .service-text-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #303030;
+  }
+  .service-text-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  .service-features {
+    list-style: none;
+    padding: 0;
+  }
+  .service-features li {
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .service-features li i {
+    color: #1583e9;
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  .quality-banner {
+    background: #1583e9;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+  }
+  .quality-banner h2 { color: #fff; font-size: 40px; margin-bottom: 20px; }
+
+  /* FAQ refinement */
+  .faq-area { padding: 100px 0; background: #fff; }
+  .accordion .card { border: 1px solid #f2f4f8; margin-bottom: 15px; }
+  .accordion .card-header button { font-size: 18px; font-weight: 700; }
+</style>
 </head>
 <body>
 
 
 
-
-
-<header class="header-area">
-
-<div class="main-header-area">
-<div class="classy-nav-container breakpoint-off">
-
-<nav class="classy-navbar justify-content-between" id="uzaNav">
-
-<a class="nav-brand" href="index.html" style="font-size: 24px; font-weight: bold; display: flex; align-items: center;">Admol Services</a>
-
-<div class="classy-navbar-toggler">
-<span class="navbarToggler"><span></span><span></span><span></span></span>
-</div>
-
-<div class="classy-menu">
-
-<div class="classycloseIcon">
-<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-</div>
-
-<div class="classynav">
-<ul id="nav">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li class="current-item"><a href="services.html">Services</a></li>
-  <li><a href="portfolio.html">Portfolio</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-
-</div>
-</nav>
-</div>
-</div>
-</header>
+<header class="header-area" id="header-placeholder"></header>
 
 
 <div class="breadcrumb-area">
@@ -79,184 +102,231 @@
 </div>
 
 
-<section class="uza-services-area section-padding-80-0">
-<div class="container">
-<div class="row">
+<!-- Intro Text Section -->
+<section class="section-padding-80">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="section-heading">
+          <h2>Premium Energy Engineering</h2>
+          <p>We don't just install hardware; we design reliable energy ecosystems. Admol Services specializes in high-performance solar and power systems built to thrive in the Nigerian environment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="single-service-area mb-80">
+<!-- Solution 1: Residential -->
+<section class="service-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+        <div class="service-image-box mb-50">
+          <img src="img/PHOTO-1.jpg" alt="Residential Solar">
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="service-text-content pl-lg-5">
+          <h2>Residential Energy Independence</h2>
+          <p>Tired of the noise and pollution of generators? Our residential solar solutions are designed to provide complete peace of mind. We transform your home into a self-sustaining power plant, ensuring your family enjoys uninterrupted comfort.</p>
+          <ul class="service-features">
+            <li><i class="fa fa-check-circle"></i> Complete Hybrid System Integration</li>
+            <li><i class="fa fa-check-circle"></i> Silent, Automatic Power Switching</li>
+            <li><i class="fa fa-check-circle"></i> Smart Battery Storage Management</li>
+            <li><i class="fa fa-check-circle"></i> 24/7 Monitoring and Remote Support</li>
+          </ul>
+          <a href="contact.html" class="btn uza-btn btn-2 mt-30">Power My Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="service-icon">
-<i class="fa fa-sun-o"></i>
-</div>
-<h5>Solar Panel Installations</h5>
-<p>High-efficiency solar panels for residential and commercial properties.</p>
-</div>
-</div>
+<!-- Solution 2: Commercial (Reversed) -->
+<section class="service-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6 order-lg-2">
+        <div class="service-image-box mb-50">
+          <img src="img/PHOTO-2.jpg" alt="Commercial Power">
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 order-lg-1">
+        <div class="service-text-content pr-lg-5 text-lg-right">
+          <h2>Business Continuity & Efficiency</h2>
+          <p>For businesses in Nigeria, power is a critical operational cost. Admol Services helps offices and commercial centers slash their diesel consumption by up to 80% while ensuring zero downtime for critical servers and equipment.</p>
+          <ul class="service-features justify-content-end">
+            <li>Custom Commercial Energy Audits <i class="fa fa-check-circle ml-15"></i></li>
+            <li>Zero-Downtime Inverter Switching <i class="fa fa-check-circle ml-15"></i></li>
+            <li>Scalable Solar PV Arrays <i class="fa fa-check-circle ml-15"></i></li>
+            <li>Reduced Operational Overhead <i class="fa fa-check-circle ml-15"></i></li>
+          </ul>
+          <a href="contact.html" class="btn uza-btn btn-2 mt-30">Audit My Business</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="single-service-area mb-80">
+<!-- Solution 3: Industrial & Institutional -->
+<section class="service-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+        <div class="service-image-box mb-50">
+          <img src="img/PHOTO-3.jpg" alt="Industrial Solar">
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="service-text-content pl-lg-5">
+          <h2>Industrial-Scale Infrastructure</h2>
+          <p>From manufacturing plants to remote farmhouses, we deliver high-capacity energy infrastructure. Our engineering team manages large-scale deployments that require robust performance and massive storage capacity.</p>
+          <ul class="service-features">
+            <li><i class="fa fa-check-circle"></i> High-Capacity Lithium-Ion Banks</li>
+            <li><i class="fa fa-check-circle"></i> Three-Phase Power Solutions</li>
+            <li><i class="fa fa-check-circle"></i> Robust Engineering & Site Planning</li>
+            <li><i class="fa fa-check-circle"></i> Maintenance Contracts & Upgrades</li>
+          </ul>
+          <a href="contact.html" class="btn uza-btn btn-2 mt-30">Consult for Industry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="service-icon">
-<i class="fa fa-plug"></i>
-</div>
-<h5>Inverter Installations</h5>
-<p>Expert setup of reliable power inverters for seamless backup power.</p>
-</div>
-</div>
+<!-- The Admol Standard -->
+<section class="section-padding-80" style="background: #101010; color: #fff;">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="section-heading">
+          <h2 style="color: #fff;">The Admol Standard</h2>
+          <p style="color: rgba(255,255,255,0.7);">Engineering excellence is at the core of everything we build. We don't compromise on quality because your energy security depends on it.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-50">
+      <!-- Pillar 1 -->
+      <div class="col-12 col-md-4">
+        <div class="quality-pillar mb-50">
+          <i class="fa fa-shield" style="font-size: 40px; color: #f1b922; margin-bottom: 20px;"></i>
+          <h5 style="color: #fff;">Grade-A Hardware</h5>
+          <p style="color: rgba(255,255,255,0.6);">We exclusively install Tier-1 Monocrystalline panels and Pure Sine Wave inverters that are certified for extreme heat and high-performance output.</p>
+        </div>
+      </div>
+      <!-- Pillar 2 -->
+      <div class="col-12 col-md-4">
+        <div class="quality-pillar mb-50">
+          <i class="fa fa-cogs" style="font-size: 40px; color: #f1b922; margin-bottom: 20px;"></i>
+          <h5 style="color: #fff;">Precision Engineering</h5>
+          <p style="color: rgba(255,255,255,0.6);">Every system is sized by certified engineers. We account for peak loads, surge requirements, and battery depth-of-discharge to ensure 24/7 reliability.</p>
+        </div>
+      </div>
+      <!-- Pillar 3 -->
+      <div class="col-12 col-md-4">
+        <div class="quality-pillar mb-50">
+          <i class="fa fa-history" style="font-size: 40px; color: #f1b922; margin-bottom: 20px;"></i>
+          <h5 style="color: #fff;">25-Year Durability</h5>
+          <p style="color: rgba(255,255,255,0.6);">Our mounting structures use anti-corrosion alloys, and our installations are designed to withstand 30+ years of exposure to the Nigerian elements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="single-service-area mb-80">
-
-<div class="service-icon">
-<i class="fa fa-battery-three-quarters"></i>
-</div>
-<h5>Battery Storage Solutions</h5>
-<p>Deep-cycle batteries and smart storage systems tailored to your needs.</p>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="single-service-area mb-80">
-
-<div class="service-icon">
-<i class="fa fa-lightbulb-o"></i>
-</div>
-<h5>Energy Consulting</h5>
-<p>Professional assessment and system sizing to maximize your energy savings.</p>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="single-service-area mb-80">
-
-<div class="service-icon">
-<i class="fa fa-gears"></i>
-</div>
-<h5>System Maintenance</h5>
-<p>Ongoing support, cleaning, and repairs to keep your system at peak performance.</p>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="single-service-area mb-80">
-
-<div class="service-icon">
-<i class="fa fa-leaf"></i>
-</div>
-<h5>Hybrid Power Systems</h5>
-<p>Intelligent integration of solar, battery, and grid power for 24/7 reliability.</p>
-</div>
-</div>
-</div>
-</div>
+<!-- Process & FAQ Integrated -->
+<section class="faq-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="section-heading">
+          <h2>Got Questions?</h2>
+          <p>We believe in transparency. Here are the most common questions our clients ask during the design phase.</p>
+        </div>
+        <div class="accordion" id="accordionFAQ">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <button class="btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                How much can I actually save? <span><i class="fa fa-angle-down"></i></span>
+              </button>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#accordionFAQ">
+              <div class="card-body">
+                Most clients see a 60% to 90% reduction in monthly diesel/grid costs. A typical system pays for itself in just 36-48 months.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <button class="btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                Is the system weather-resistant? <span><i class="fa fa-angle-down"></i></span>
+              </button>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordionFAQ">
+              <div class="card-body">
+                Yes. Our mounting structures are built for high-wind resistance, and our panels are designed to handle Nigeria's intense heat and rainfall without losing efficiency.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-lg-5 offset-lg-1">
+        <div class="section-heading">
+          <h2>The Journey</h2>
+          <p>From the first call to 24/7 power.</p>
+        </div>
+        <ul class="service-features">
+          <li><span class="step-number" style="width:30px; height:30px; font-size:14px; margin:0 15px 0 0;">1</span> Professional Energy Audit</li>
+          <li><span class="step-number" style="width:30px; height:30px; font-size:14px; margin:0 15px 0 0;">2</span> Custom System Design</li>
+          <li><span class="step-number" style="width:30px; height:30px; font-size:14px; margin:0 15px 0 0;">3</span> Precision Installation</li>
+          <li><span class="step-number" style="width:30px; height:30px; font-size:14px; margin:0 15px 0 0;">4</span> Lifetime Monitoring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 
 <section class="cta-testimonial-cfa-area">
-
-<div class="uza-cta-area section-padding-80-0">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-12 col-lg-8">
-<div class="cta-content mb-80">
-<h2>Interested in working with us?</h2>
-<h6>Give us a call or click below for a free assessment.</h6>
-<a href="contact.html" class="btn uza-btn btn-2 mt-4">Get a Free Quote</a>
-</div>
-</div>
-<div class="col-12 col-lg-4">
-<div class="cta-content mb-80">
-<div class="call-now-btn">
-<a href="tel:+2349060704168"><span>Call us now:</span> (+234)9060704168</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+  <div class="uza-cta-area section-padding-80-0" style="position: relative; overflow: hidden;">
+    <!-- Video Background for CTA -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.2;">
+      <source src="img/VIDEO-2.mp4" type="video/mp4">
+    </video>
+    
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-8">
+          <div class="cta-content mb-80">
+            <h2>Ready to lower your energy bills?</h2>
+            <h6>Contact Admol Services today for a free site assessment and customized quote.</h6>
+            <a href="contact.html" class="btn uza-btn btn-2 mt-4">Get Your Free Quote</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="cta-content mb-80">
+            <div class="call-now-btn">
+              <a href="tel:+2349060704168"><span>Call us now:</span> (+234)9060704168</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
 
 
 
-<footer class="footer-area section-padding-80-0">
-<div class="container">
-<div class="row justify-content-between">
-
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="single-footer-widget mb-80">
-
-<h4 class="widget-title">Contact Us</h4>
-
-<div class="footer-content mb-15">
-<h3>(+234)9060704168</h3>
-<p>Beside Abc transport, utako, Abuja <br> <a href="mailto:info@admolservices.com">info@admolservices.com</a></p>
-</div>
-<p class="mb-0">Mon - Fri: 9:00 - 19:00 <br>
-Closed on Weekends</p>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="single-footer-widget mb-80">
-
-<h4 class="widget-title">Quick Link</h4>
-
-<nav>
-<ul class="our-link">
-<li><a href="about.html">About Us</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-</ul>
-</nav>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="single-footer-widget mb-80">
-
-<h4 class="widget-title">Resources</h4>
-
-<nav>
-<ul class="our-link">
-<li><a href="#">Customer Support</a></li>
-<li><a href="#">Privacy</a></li>
-<li><a href="#">Our Team</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
-</div>
-</div>
-
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="single-footer-widget mb-80">
-
-<h4 class="widget-title">About Us</h4>
-<p>AdmolServices specializes in high-quality solar panel installations, inverter setups, and solar panel sales. We are committed to delivering efficient and reliable energy solutions for homes and businesses.</p>
-
-<div class="copywrite-text mb-30">
-<p>&copy; Copyright <span id="displayYear"></span> <a href="index.html">Admol Services</a>. All rights reserved.</p>
-</div>
-
-<div class="footer-social-info">
-<a href="https://facebook.com" class="facebook" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-<a href="https://twitter.com" class="twitter" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-<a href="https://pinterest.com" class="pinterest" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-<a href="https://instagram.com" class="instagram" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
-<a href="https://youtube.com" class="youtube" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="YouTube"><i class="fa fa-youtube-play"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
+<footer id="footer-placeholder"></footer>
 
 
 
 <script src="js/jquery.min.js"></script>
+    <script src="js/load-partials.js"></script>
 
 <script src="js/popper.min.js"></script>
 
