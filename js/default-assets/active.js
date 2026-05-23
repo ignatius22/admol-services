@@ -220,6 +220,13 @@
         }
     });
 
+    // **************************
+    // :: 14.1 Dynamic Year Code
+    // **************************
+    var d = new Date();
+    var year = d.getFullYear();
+    document.getElementById('displayYear').innerHTML = year;
+
     // ********************************
     // :: 15.0 Slick Slider Active Code
     // ********************************

@@ -15,7 +15,11 @@
 
     <title>Admol Services | Solar Panel Installations & Inverter Sales</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
     <meta
       property="og:title"
       content="Admol Services | Solar Panel Installations & Inverter Sales"
@@ -58,6 +62,8 @@
     <!-- <link rel="icon" href="img/core-img/favicon.ico" /> -->
 
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
@@ -73,6 +79,133 @@
         ]
       }
     </script>
+
+    <style>
+      body { font-family: 'Poppins', sans-serif; }
+      .main-header-area {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease;
+      }
+      .header-area.sticky .main-header-area {
+        background: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .header-area.sticky .nav-brand,
+      .header-area.sticky .classynav ul li a {
+        color: #303030 !important;
+      }
+      .header-area.sticky .classynav ul li a:hover,
+      .header-area.sticky .classynav ul li.current-item a {
+        color: #f1b922 !important;
+      }
+      /* Ensure default state is also solid if needed, but transparent on hero */
+      .header-area:not(.sticky) .main-header-area {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .single-service-area {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+        padding: 30px;
+      }
+      .single-service-area:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+      /* Modern Hero Styles */
+      .welcome-area {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+        filter: contrast(1.1) brightness(0.9) saturate(1.2);
+        transform: translateZ(0); /* Hardware acceleration */
+      }
+      .video-pattern-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(0,0,0,0.2) 1px, transparent 1px);
+        background-size: 3px 3px;
+        z-index: -1;
+        opacity: 0.4;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+        z-index: -1;
+      }
+      .hero-content-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 50px;
+        border-radius: 20px;
+        max-width: 800px;
+        text-align: center;
+        color: #fff;
+      }
+      .hero-welcome-text h2 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+      .hero-welcome-text h2 span {
+        color: #f1b922;
+        display: block;
+        height: 60px;
+      }
+      
+      /* Text Cycling Animation */
+      .cycling-text::after {
+        content: "Solar Solutions";
+        animation: textCycle 9s infinite;
+      }
+      @keyframes textCycle {
+        0%, 30% { content: "Solar Energy"; opacity: 1; }
+        31%, 33% { opacity: 0; }
+        34%, 63% { content: "Power Backup"; opacity: 1; }
+        64%, 66% { opacity: 0; }
+        67%, 97% { content: "Smart Storage"; opacity: 1; }
+        98%, 100% { opacity: 0; }
+      }
+
+      .scroll-down-indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 24px;
+        animation: bounce 2s infinite;
+        cursor: pointer;
+        z-index: 10;
+      }
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+        40% {transform: translateY(-10px) translateX(-50%);}
+        60% {transform: translateY(-5px) translateX(-50%);}
+      }
+    </style>
     
   </head>
   <body>
@@ -114,69 +247,38 @@
     </header>
 
     <section class="welcome-area">
-      <div class="welcome-slides owl-carousel">
-        <!-- Slide 1 -->
-        <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/slide1.jpg);">
-          <div class="welcome-content h-100">
-            <div class="container h-100">
-              <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-12 col-md-10 col-lg-8">
-                  <div class="welcome-text">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">
-                      Clean Energy for a <br /> Brighter <span>Future</span>
-                    </h2>
-                    <h5 data-animation="fadeInUp" data-delay="400ms">
-                      Professional Solar Panel Installations & Inverter Sales for Your Home and Business.
-                    </h5>
-                    <a href="contact.html" class="btn uza-btn btn-2 mt-4" data-animation="fadeInUp" data-delay="700ms">Get a Free Quote</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Video Background -->
+      <video autoplay muted loop playsinline poster="img/PHOTO-1.jpg" class="hero-video-bg">
+        <source src="img/VIDEO-1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <!-- Overlays -->
+      <div class="video-pattern-overlay"></div>
+      <div class="hero-overlay"></div>
 
-        <!-- Slide 2 -->
-        <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/slidetwo.jpg);">
-          <div class="welcome-content h-100">
-            <div class="container h-100">
-              <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-12 col-md-10 col-lg-8">
-                  <div class="welcome-text">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">
-                      Reliable Power <br /> Solutions <span>24/7</span>
-                    </h2>
-                    <h5 data-animation="fadeInUp" data-delay="400ms">
-                      Expert setup of reliable power inverters for seamless backup power.
-                    </h5>
-                    <a href="contact.html" class="btn uza-btn btn-2 mt-4" data-animation="fadeInUp" data-delay="700ms">Get a Free Quote</a>
-                  </div>
-                </div>
+      <!-- Hero Content -->
+      <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col-12 col-md-10">
+            <div class="hero-content-card mx-auto">
+              <div class="hero-welcome-text">
+                <h2 data-animation="fadeInUp" data-delay="100ms">
+                  Clean Energy for a <br /> Brighter <span class="cycling-text"></span>
+                </h2>
+                <h5 data-animation="fadeInUp" data-delay="400ms">
+                  Professional Solar Panel Installations & Inverter Sales for Your Home and Business.
+                </h5>
+                <a href="contact.html" class="btn uza-btn btn-2 mt-4" data-animation="fadeInUp" data-delay="700ms">Get a Free Quote</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Slide 3 -->
-        <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/slide3.jpg);">
-          <div class="welcome-content h-100">
-            <div class="container h-100">
-              <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-12 col-md-10 col-lg-8">
-                  <div class="welcome-text">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">
-                      Smart Energy <br /> Storage <span>Systems</span>
-                    </h2>
-                    <h5 data-animation="fadeInUp" data-delay="400ms">
-                      Deep-cycle batteries and smart storage systems tailored to your needs.
-                    </h5>
-                    <a href="contact.html" class="btn uza-btn btn-2 mt-4" data-animation="fadeInUp" data-delay="700ms">Get a Free Quote</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-down-indicator" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'});">
+        <i class="fa fa-angle-down"></i>
       </div>
     </section>
 
@@ -185,7 +287,10 @@
         <div class="row align-items-center">
           <div class="col-12 col-md-6">
             <div class="about-us-thumbnail mb-80">
-              <img loading="lazy" src="img/bg-img/solar_power.jpg" alt="Solar Power Installation" />
+              <video autoplay muted loop playsinline style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <source src="img/VIDEO-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
@@ -234,7 +339,7 @@
           <div class="col-12 col-lg-4">
             <div class="single-service-area mb-80">
               <div class="service-icon">
-                <i class="icon_lightbulb_alt"></i>
+                <i class="fa fa-sun-o"></i>
               </div>
               <h5>Solar Panel Installations</h5>
               <p>
@@ -247,7 +352,7 @@
           <div class="col-12 col-lg-4">
             <div class="single-service-area mb-80">
               <div class="service-icon">
-                <i class="fa fa-bolt"></i>
+                <i class="fa fa-plug"></i>
               </div>
               <h5>Inverter Installations</h5>
               <p>
@@ -260,7 +365,7 @@
           <div class="col-12 col-lg-4">
             <div class="single-service-area mb-80">
               <div class="service-icon">
-                <i class="fa fa-battery-full"></i>
+                <i class="fa fa-battery-three-quarters"></i>
               </div>
               <h5>Battery Storage Solutions</h5>
               <p>
@@ -273,7 +378,7 @@
           <div class="col-12 col-lg-4">
             <div class="single-service-area mb-80">
               <div class="service-icon">
-                <i class="fa fa-line-chart"></i>
+                <i class="fa fa-lightbulb-o"></i>
               </div>
               <h5>Energy Consulting</h5>
               <p>
@@ -286,7 +391,7 @@
           <div class="col-12 col-lg-4">
             <div class="single-service-area mb-80">
               <div class="service-icon">
-                <i class="fa fa-wrench"></i>
+                <i class="fa fa-gears"></i>
               </div>
               <h5>System Maintenance</h5>
               <p>
@@ -299,7 +404,7 @@
           <div class="col-12 col-lg-4">
             <div class="single-service-area mb-80">
               <div class="service-icon">
-                <i class="fa fa-refresh"></i>
+                <i class="fa fa-leaf"></i>
               </div>
               <h5>Hybrid Power Systems</h5>
               <p>
@@ -326,7 +431,7 @@
         <div class="row">
           <div class="portfolio-sildes owl-carousel">
             <div class="single-portfolio-slide">
-              <img loading="lazy" src="img/bg-img/p1.jpg" alt="" />
+              <img loading="lazy" src="img/PHOTO-4.jpg" alt="" />
 
               <div class="overlay-effect">
                 <h4>Residential Solar Power Setup</h4>
@@ -341,7 +446,7 @@
             </div>
 
             <div class="single-portfolio-slide">
-              <img loading="lazy" src="img/bg-img/p4.jpg" alt="" />
+              <img loading="lazy" src="img/PHOTO-5.jpg" alt="" />
 
               <div class="overlay-effect">
                 <h4>Commercial Inverter & Battery Installation</h4>
@@ -356,7 +461,7 @@
             </div>
 
             <div class="single-portfolio-slide">
-              <img loading="lazy" src="img/bg-img/p5.jpg" alt="" />
+              <img loading="lazy" src="img/PHOTO-6.jpg" alt="" />
 
               <div class="overlay-effect">
                 <h4>Off-Grid Solar Solution for Farmhouse</h4>
@@ -371,7 +476,7 @@
             </div>
 
             <div class="single-portfolio-slide">
-              <img loading="lazy" src="img/bg-img/p6.jpg" alt="" />
+              <img loading="lazy" src="img/PHOTO-1.jpg" alt="" />
 
               <div class="overlay-effect">
                 <h4>Industrial Power Backup System</h4>
@@ -386,7 +491,7 @@
             </div>
 
             <div class="single-portfolio-slide">
-              <img loading="lazy" src="img/bg-img/p15.jpg" alt="" />
+              <img loading="lazy" src="img/PHOTO-2.jpg" alt="" />
 
               <div class="overlay-effect">
                 <h4>Residential Solar Power Setup</h4>
@@ -401,7 +506,7 @@
             </div>
 
             <div class="single-portfolio-slide">
-              <img loading="lazy" src="img/bg-img/p16.jpg" alt="" />
+              <img loading="lazy" src="img/PHOTO-3.jpg" alt="" />
 
               <div class="overlay-effect">
                 <h4>Commercial Inverter & Battery Installation</h4>
@@ -465,7 +570,7 @@
           <div class="col-12 col-lg-4">
             <div
               class="single-blog-post bg-img mb-80"
-              style="background-image: url(img/bg-img/8.jpg)"
+              style="background-image: url(img/PHOTO-4.jpg)"
             >
               <div class="post-content">
                 <span class="post-date"><span>23</span> August, 2018</span>
@@ -486,7 +591,7 @@
           <div class="col-12 col-lg-4">
             <div
               class="single-blog-post bg-img mb-80"
-              style="background-image: url(img/bg-img/9.jpg)"
+              style="background-image: url(img/PHOTO-5.jpg)"
             >
               <div class="post-content">
                 <span class="post-date"><span>13</span> December, 2018</span>
@@ -507,7 +612,7 @@
           <div class="col-12 col-lg-4">
             <div
               class="single-blog-post bg-img mb-80"
-              style="background-image: url(img/bg-img/10.jpg)"
+              style="background-image: url(img/PHOTO-6.jpg)"
             >
               <div class="post-content">
                 <span class="post-date"><span>08</span> July, 2018</span>
@@ -591,7 +696,7 @@
               </p>
 
               <div class="copywrite-text mb-30">
-                <p>&copy; Copyright 2024 <a href="index.html">Admol Services</a>. All rights reserved.</p>
+                <p>&copy; Copyright <span id="displayYear"></span> <a href="index.html">Admol Services</a>. All rights reserved.</p>
               </div>
 
               <div class="footer-social-info">
@@ -651,6 +756,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scroll to Top -->
+    <a href="#" id="scrollUp" style="position: fixed; z-index: 2147483647; display: block;"><i class="fa fa-angle-up"></i></a>
 
     <script src="js/jquery.min.js"></script>
 
