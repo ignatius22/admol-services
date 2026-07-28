@@ -22,6 +22,30 @@ img {
   background-size: cover;
 }
 
+.hero-section-one .hero-text h2 {
+  color: #fff;
+  font-size: 70px;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+  transform: translateY(-20px);
+}
+
+.hero-section-one.swiper-slide.swiper-slide-active .hero-text h2 {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .8s;
+  transform: translateY(0);
+}
+
+.bannr-text h1 {
+  color: #fff;
+  font-size: clamp(36px, 5vw, 70px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .experience figure {
   height: 370px;
 }
@@ -369,6 +393,9 @@ header a[aria-current="page"] { color: var(--admol-blue); }
   .admol-brand-logo {
     width: 170px;
     height: 52px;
+  }
+  .hero-section-one .hero-text h2 {
+    font-size: 40px;
   }
   .project-video-frame {
     margin-top: 28px;
