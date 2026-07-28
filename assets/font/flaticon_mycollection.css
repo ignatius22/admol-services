@@ -1,0 +1,119 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_mycollection";
+    src: url("./flaticon_mycollection.woff2?a066bb6418586d30679b2c9135d718d7") format("woff2"),
+url("./flaticon_mycollection.woff?a066bb6418586d30679b2c9135d718d7") format("woff"),
+url("./flaticon_mycollection.eot?a066bb6418586d30679b2c9135d718d7#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.ttf?a066bb6418586d30679b2c9135d718d7") format("truetype"),
+url("./flaticon_mycollection.svg?a066bb6418586d30679b2c9135d718d7#flaticon_mycollection") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-charge:before {
+    content: "\f101";
+}
+.flaticon-electricity:before {
+    content: "\f102";
+}
+.flaticon-solar-energy-1:before {
+    content: "\f103";
+}
+.flaticon-eco-house:before {
+    content: "\f104";
+}
+.flaticon-right-up:before {
+    content: "\f105";
+}
+.flaticon-low-price:before {
+    content: "\f106";
+}
+.flaticon-web-development:before {
+    content: "\f107";
+}
+.flaticon-maintenance:before {
+    content: "\f108";
+}
+.flaticon-solar-energy:before {
+    content: "\f109";
+}
+.flaticon-solar-panels:before {
+    content: "\f10a";
+}
+.flaticon-bolt:before {
+    content: "\f10b";
+}
+.flaticon-plug:before {
+    content: "\f10c";
+}
+.flaticon-renewable-energy:before {
+    content: "\f10d";
+}
+.flaticon-save-energy:before {
+    content: "\f10e";
+}
+.flaticon-eco-energy:before {
+    content: "\f10f";
+}
+.flaticon-global:before {
+    content: "\f110";
+}
+.flaticon-wind-energy:before {
+    content: "\f111";
+}
+.flaticon-quote:before {
+    content: "\f112";
+}
+.flaticon-solar-panel-1:before {
+    content: "\f113";
+}
+.flaticon-link:before {
+    content: "\f114";
+}
+.flaticon-solar-panel:before {
+    content: "\f115";
+}
+.flaticon-fossil-fuel:before {
+    content: "\f116";
+}
+.flaticon-water-energy:before {
+    content: "\f117";
+}
+.flaticon-battery:before {
+    content: "\f118";
+}
+.flaticon-left-arrow:before {
+    content: "\f119";
+}
+.flaticon-right-arrow:before {
+    content: "\f11a";
+}
+.flaticon-map-location:before {
+    content: "\f11b";
+}
+.flaticon-iphone:before {
+    content: "\f11c";
+}
+.flaticon-magnifying-glass:before {
+    content: "\f11d";
+}
+

@@ -1,0 +1,141 @@
+$flaticon_mycollection-font: "flaticon_mycollection";
+
+@font-face {
+    font-family: $flaticon_mycollection-font;
+    src: url("./flaticon_mycollection.woff2?a066bb6418586d30679b2c9135d718d7") format("woff2"),
+url("./flaticon_mycollection.woff?a066bb6418586d30679b2c9135d718d7") format("woff"),
+url("./flaticon_mycollection.eot?a066bb6418586d30679b2c9135d718d7#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.ttf?a066bb6418586d30679b2c9135d718d7") format("truetype"),
+url("./flaticon_mycollection.svg?a066bb6418586d30679b2c9135d718d7#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mycollection-map: (
+    "charge": "\f101",
+    "electricity": "\f102",
+    "solar-energy-1": "\f103",
+    "eco-house": "\f104",
+    "right-up": "\f105",
+    "low-price": "\f106",
+    "web-development": "\f107",
+    "maintenance": "\f108",
+    "solar-energy": "\f109",
+    "solar-panels": "\f10a",
+    "bolt": "\f10b",
+    "plug": "\f10c",
+    "renewable-energy": "\f10d",
+    "save-energy": "\f10e",
+    "eco-energy": "\f10f",
+    "global": "\f110",
+    "wind-energy": "\f111",
+    "quote": "\f112",
+    "solar-panel-1": "\f113",
+    "link": "\f114",
+    "solar-panel": "\f115",
+    "fossil-fuel": "\f116",
+    "water-energy": "\f117",
+    "battery": "\f118",
+    "left-arrow": "\f119",
+    "right-arrow": "\f11a",
+    "map-location": "\f11b",
+    "iphone": "\f11c",
+    "magnifying-glass": "\f11d",
+);
+
+.flaticon-charge:before {
+    content: map-get($flaticon_mycollection-map, "charge");
+}
+.flaticon-electricity:before {
+    content: map-get($flaticon_mycollection-map, "electricity");
+}
+.flaticon-solar-energy-1:before {
+    content: map-get($flaticon_mycollection-map, "solar-energy-1");
+}
+.flaticon-eco-house:before {
+    content: map-get($flaticon_mycollection-map, "eco-house");
+}
+.flaticon-right-up:before {
+    content: map-get($flaticon_mycollection-map, "right-up");
+}
+.flaticon-low-price:before {
+    content: map-get($flaticon_mycollection-map, "low-price");
+}
+.flaticon-web-development:before {
+    content: map-get($flaticon_mycollection-map, "web-development");
+}
+.flaticon-maintenance:before {
+    content: map-get($flaticon_mycollection-map, "maintenance");
+}
+.flaticon-solar-energy:before {
+    content: map-get($flaticon_mycollection-map, "solar-energy");
+}
+.flaticon-solar-panels:before {
+    content: map-get($flaticon_mycollection-map, "solar-panels");
+}
+.flaticon-bolt:before {
+    content: map-get($flaticon_mycollection-map, "bolt");
+}
+.flaticon-plug:before {
+    content: map-get($flaticon_mycollection-map, "plug");
+}
+.flaticon-renewable-energy:before {
+    content: map-get($flaticon_mycollection-map, "renewable-energy");
+}
+.flaticon-save-energy:before {
+    content: map-get($flaticon_mycollection-map, "save-energy");
+}
+.flaticon-eco-energy:before {
+    content: map-get($flaticon_mycollection-map, "eco-energy");
+}
+.flaticon-global:before {
+    content: map-get($flaticon_mycollection-map, "global");
+}
+.flaticon-wind-energy:before {
+    content: map-get($flaticon_mycollection-map, "wind-energy");
+}
+.flaticon-quote:before {
+    content: map-get($flaticon_mycollection-map, "quote");
+}
+.flaticon-solar-panel-1:before {
+    content: map-get($flaticon_mycollection-map, "solar-panel-1");
+}
+.flaticon-link:before {
+    content: map-get($flaticon_mycollection-map, "link");
+}
+.flaticon-solar-panel:before {
+    content: map-get($flaticon_mycollection-map, "solar-panel");
+}
+.flaticon-fossil-fuel:before {
+    content: map-get($flaticon_mycollection-map, "fossil-fuel");
+}
+.flaticon-water-energy:before {
+    content: map-get($flaticon_mycollection-map, "water-energy");
+}
+.flaticon-battery:before {
+    content: map-get($flaticon_mycollection-map, "battery");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon_mycollection-map, "left-arrow");
+}
+.flaticon-right-arrow:before {
+    content: map-get($flaticon_mycollection-map, "right-arrow");
+}
+.flaticon-map-location:before {
+    content: map-get($flaticon_mycollection-map, "map-location");
+}
+.flaticon-iphone:before {
+    content: map-get($flaticon_mycollection-map, "iphone");
+}
+.flaticon-magnifying-glass:before {
+    content: map-get($flaticon_mycollection-map, "magnifying-glass");
+}

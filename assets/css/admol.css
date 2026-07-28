@@ -1,0 +1,401 @@
+/* Admoltech Services Ltd. brand layer for the Bolt template. */
+:root {
+  --admol-blue: #1583e9;
+  --admol-navy: #071d35;
+  --admol-green: #75b83f;
+}
+
+/* The marketplace template relies on source images already matching each slot.
+   Admol's project photos use mixed dimensions, so constrain them explicitly. */
+img {
+  max-width: 100%;
+}
+
+.preloader {
+  display: none !important;
+}
+
+.hero-section-one,
+.bannr,
+.section-sustainable {
+  background-position: center;
+  background-size: cover;
+}
+
+.experience figure {
+  height: 370px;
+}
+
+.experience figure > img,
+.experience-img > img,
+.services > img,
+.tab-img > img:first-child,
+.project-img figure > img,
+.blog-img figure > img,
+.team > img,
+.section-project-details .hover-img figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience figure > img {
+  margin-left: 0;
+  transform: none;
+}
+
+.home-company-overview figure {
+  height: 500px;
+  margin-top: 34px;
+}
+
+.home-company-overview .btn {
+  display: inline-flex;
+}
+
+.experience-img {
+  height: 747px;
+  overflow: hidden;
+}
+
+.director-renewable > img {
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+}
+
+.ceo-portrait {
+  width: 100%;
+  height: 360px;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.services > img {
+  width: calc(100% + 82px);
+  height: 220px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 93px);
+}
+
+.services p {
+  flex: 1;
+}
+
+.project-video-section {
+  background: #f4f7fa;
+}
+
+.project-video-section .heading p {
+  max-width: 760px;
+  margin: 18px auto 0;
+}
+
+.project-video-frame {
+  max-width: 1100px;
+  margin: 42px auto 0;
+  padding: 10px;
+  background: var(--admol-navy);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(7, 29, 53, .16);
+}
+
+.project-video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.tab-img > img:first-child {
+  height: 434px;
+}
+
+.project-img figure {
+  height: 434px;
+  overflow: hidden;
+}
+
+.blog-img figure {
+  height: 300px;
+  overflow: hidden;
+}
+
+.admin img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.nav-c-slider {
+  display: grid;
+  grid-template-columns: repeat(4, 76px);
+  gap: 10px;
+  height: auto;
+}
+
+.nav-c-slider a,
+.nav-c-slider a.next-slide.nav-active {
+  position: static;
+  display: block;
+}
+
+.nav-c-slider a img,
+.nav-c-slider a.next-slide.nav-active img {
+  width: 76px;
+  height: 76px;
+  margin: 0;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-c-slider a.next-slide.nav-active img {
+  border-color: var(--admol-blue);
+}
+
+.section-customer {
+  padding-top: 120px;
+}
+
+.team > img {
+  height: 340px;
+}
+
+.clients-slider,
+.container:has(> .clients-slider) {
+  display: none;
+}
+
+.section-project-details > .container > .hover-img figure {
+  height: 560px;
+}
+
+.section-project-details .project-details .row .hover-img figure {
+  height: 320px;
+}
+
+.mapouter iframe {
+  width: 100%;
+}
+
+.blog-details .video > img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+}
+
+.admol-brand-logo {
+  display: block;
+  width: 220px;
+  height: 64px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.res-log .admol-brand-logo {
+  width: 190px;
+  height: 58px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  font-size: 28px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.whatsapp-float:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .3);
+}
+
+.contact-form-status {
+  display: none;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #eef7ff;
+  color: var(--admol-navy);
+}
+
+.header-search-button { display: none; }
+
+.admol-footer {
+  background-color: var(--admol-navy);
+  background-image: none !important;
+  color: #dbe7f2;
+  padding-top: 64px;
+}
+
+.admol-footer::before { display: none; }
+.admol-footer > .container { position: relative; z-index: 1; }
+.admol-footer .footer-top {
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: static;
+  background: transparent;
+  border-radius: 0;
+  color: inherit;
+}
+.admol-footer .footer-top::before { display: none; }
+.admol-footer .footer-top .row { align-items: flex-start; }
+.admol-footer .logo p {
+  width: 100%;
+  max-width: 390px;
+  padding: 16px 0 0;
+}
+.admol-footer .company-registration {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .04em;
+  padding-top: 8px;
+}
+.admol-footer .col-lg-4:last-child {
+  overflow-wrap: anywhere;
+}
+
+.admol-footer .admol-brand-logo {
+  width: 270px;
+  height: auto;
+  max-height: 96px;
+}
+
+.admol-footer .footer-social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.admol-footer .footer-social-icons a {
+  align-items: center;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  display: inline-flex;
+  height: 38px;
+  justify-content: center;
+  margin: 0;
+  width: 38px;
+}
+
+.admol-footer .footer-social-icons a:hover {
+  background: var(--admol-blue);
+  border-color: var(--admol-blue);
+  color: #fff;
+}
+
+.delivery-stages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.delivery-stage {
+  border-left: 4px solid var(--admol-green);
+  padding: 8px 10px 8px 14px;
+}
+
+.delivery-stage strong,
+.delivery-stage span {
+  display: block;
+  color: #fff;
+}
+
+.delivery-stage strong {
+  font-family: inherit;
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.delivery-stage span {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.admol-footer h3 { color: #fff; margin-bottom: 20px; }
+.admol-footer p { color: #b9c8d5; }
+.admol-footer a { color: #dbe7f2; }
+.admol-footer a:hover { color: var(--admol-blue); }
+.admol-footer .footer-links { margin: 0; padding: 0; list-style: none; }
+.admol-footer .footer-links li { margin-bottom: 10px; }
+.admol-footer .footer-bottom {
+  margin-top: 48px;
+  padding: 22px 88px 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, .12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.admol-footer .footer-bottom p { margin: 0; }
+.admol-footer .footer-bottom > a {
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+header a[aria-current="page"] { color: var(--admol-blue); }
+
+@media (max-width: 767px) {
+  .delivery-stages {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .admol-brand-logo {
+    width: 170px;
+    height: 52px;
+  }
+  .project-video-frame {
+    margin-top: 28px;
+    padding: 6px;
+    border-radius: 9px;
+  }
+  .whatsapp-float { right: 16px; bottom: 88px; width: 52px; height: 52px; }
+  .experience figure,
+  .experience-img,
+  .tab-img > img:first-child,
+  .section-project-details > .container > .hover-img figure {
+    height: 340px;
+  }
+  .project-img figure { height: 360px; }
+  .blog-img figure { height: 240px; }
+  .ceo-portrait { height: 320px; }
+  .blog-details .video > img { height: 320px; }
+  .nav-c-slider { grid-template-columns: repeat(4, 58px); }
+  .nav-c-slider a img,
+  .nav-c-slider a.next-slide.nav-active img { width: 58px; height: 58px; }
+  .section-customer { padding-top: 80px; }
+  .admol-footer { padding-top: 48px; }
+  .admol-footer .footer-top .row { row-gap: 32px; }
+  .admol-footer .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 36px;
+    padding: 20px 0;
+  }
+}
