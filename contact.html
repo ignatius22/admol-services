@@ -89,11 +89,11 @@
                 <div class="bar-menu">
                   <i class="fa-solid fa-bars"></i>
                 </div>
-                <a href="javascript:void(0)" id="desktop-menu" class="menu-start">
+                <a href="javascript:void(0)" id="desktop-menu" class="menu-start" aria-label="Open navigation menu">
                   <svg id="ham-menue" viewBox="0 0 100 100"> <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path> <path class="line line2" d="M 20,50 H 80"></path> <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path> </svg>
                 </a>
                 <div class="header-search-button search-box-outer">
-                <a href="javascript:void(0)" class="search-btn">
+                <a href="javascript:void(0)" class="search-btn" aria-label="Open site search">
                   <i class="flaticon-magnifying-glass"></i>
                 </a>
                 </div>
@@ -154,27 +154,44 @@
     </div>
     <div class="row">
       <div class="col-lg-8">
-        <form class="content-form" id="contact-form" method="post">
+        <form class="content-form site-enquiry-form" id="contact-form" action="contact.php" method="post">
           <h4>Let’s Get in Touch</h4>
-          <div class="inputbox">
-            <input type="text" name="Complete_Name" placeholder="Complete Name" required="">
+          <p>Tell us what you need and our team will respond using the contact details you provide.</p>
+          <input type="hidden" name="form_source" value="Contact page">
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="company-website">Leave this field empty</label>
+            <input id="company-website" type="text" name="company_website" tabindex="-1" autocomplete="off">
           </div>
           <div class="inputbox">
-            <input type="email" name="Email_Address" placeholder="Email Address" required="">
+            <label class="form-field-label" for="contact-name">Complete Name</label>
+            <input id="contact-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
           </div>
-          <select class="nice-select Advice">
-            <option>Select Service</option>
-            <option>Solar Street Lights</option>
-            <option>Inverter Installation</option>
-            <option>Solar-Powered Boreholes</option>
-            <option>CCTV Camera Setup</option>
-            <option>Construction of Roads</option>
-            <option>General Contracting</option>
-          </select>
+          <div class="inputbox">
+            <label class="form-field-label" for="contact-email">Email Address</label>
+            <input id="contact-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="select-field">
+            <label class="form-field-label" for="contact-service">Service Required</label>
+            <select id="contact-service" class="nice-select Advice" name="service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>Solar Street Lights</option>
+              <option>Inverter Installation</option>
+              <option>Solar-Powered Boreholes</option>
+              <option>CCTV Camera Setup</option>
+              <option>Construction of Roads</option>
+              <option>General Contracting</option>
+            </select>
+          </div>
           <div class="textareabox">
-            <textarea placeholder="Message"></textarea>
+            <label class="form-field-label" for="contact-message">Project Details</label>
+            <textarea id="contact-message" name="message" placeholder="Tell us about the site, location and work required" minlength="10" required></textarea>
           </div>
-          <button type="submit" class="btn bk">Submit Now</button>
+          <div class="form-submit-row">
+            <button type="submit" class="btn bk">Send Enquiry</button>
+            <span>We typically respond during business hours.</span>
+          </div>
+          <div class="contact-form-status" role="status" aria-live="polite"></div>
+          <p class="contact-fallback">Prefer another option? <a href="https://wa.me/2349060704168" target="_blank" rel="noopener">Message us on WhatsApp</a> or call <a href="tel:+2349060704168">+234 906 070 4168</a>.</p>
         </form>
       </div>
       <div class="col-lg-4">
@@ -213,7 +230,7 @@
 <footer class="admol-footer" style="background-image: url(assets/img/footer-line.png);"><div class="container"><div class="footer-top"><div class="row"><div class="col-lg-4"><div class="logo"><a href="index.html"><img class="admol-brand-logo" src="assets/img/admoltech-logo.png" alt="Admoltech Services Ltd."></a><p>Solar, security, water and infrastructure solutions delivered across Nigeria.</p><p class="company-registration">RC 8095737</p></div></div><div class="col-lg-4"><h3>Explore</h3><ul class="footer-links"><li><a href="about.html">About Admoltech</a></li><li><a href="services.html">Our Services</a></li><li><a href="portfolio.html">Projects</a></li></ul></div><div class="col-lg-4"><h3>Contact Us</h3><p>Suite B9, Abraham Plaza, Beside ABC Transport, Utako, Abuja</p><p><a href="tel:+2349060704168">+234 906 070 4168</a><br><a href="tel:+2348077607620">+234 807 760 7620</a><br><a href="mailto:info@admolservices.com">info@admolservices.com</a></p><div class="social-media-text footer-social-icons"><a href="https://www.facebook.com/admolservices" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a href="https://www.linkedin.com/company/admolservices" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></div></div></div></div><div class="footer-bottom"><p>Copyright &copy; 2026 Admoltech Services Ltd. All rights reserved.</p><a href="contact.html">Request a Quote</a></div></div></footer>
 
 <!-- progress -->
-<div id="progress">
+<div id="progress" role="button" tabindex="0" aria-label="Back to top">
       <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
 </div>
 <!-- search-popup -->

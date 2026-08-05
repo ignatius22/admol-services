@@ -187,7 +187,7 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/preloader.js"></script>
   </head>
-  <body>
+  <body class="home-page">
     <div class="preloader">
       <div id="loader"></div>
     </div>
@@ -286,7 +286,7 @@
               <div class="bar-menu">
                 <i class="fa-solid fa-bars"></i>
               </div>
-              <a href="javascript:void(0)" id="desktop-menu" class="menu-start">
+              <a href="javascript:void(0)" id="desktop-menu" class="menu-start" aria-label="Open navigation menu">
                 <svg id="ham-menue" viewBox="0 0 100 100">
                   <path
                     class="line line1"
@@ -300,7 +300,7 @@
                 </svg>
               </a>
               <div class="header-search-button search-box-outer">
-                <a href="javascript:void(0)" class="search-btn">
+                <a href="javascript:void(0)" class="search-btn" aria-label="Open site search">
                   <i class="flaticon-magnifying-glass"></i>
                 </a>
               </div>
@@ -409,7 +409,8 @@
                       decoding="async"
                       fetchpriority="high"
                       src="assets/img/hero-img.png"
-                      alt="Admol solar energy project"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </div>
                 </div>
@@ -446,7 +447,8 @@
                       loading="lazy"
                       decoding="async"
                       src="assets/img/hero-img.png"
-                      alt="Admol solar energy project"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </div>
                 </div>
@@ -483,7 +485,8 @@
                       loading="lazy"
                       decoding="async"
                       src="assets/img/hero-img.png"
-                      alt="Admol solar energy project"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </div>
                 </div>
@@ -582,7 +585,7 @@
           <span>What We Do</span>
           <h2>Our Core Services</h2>
         </div>
-        <div class="row">
+        <div class="row services-grid-row">
           <div class="col-lg-4 col-md-6">
             <div class="services">
               <i class="flaticon-solar-energy-1"></i>
@@ -751,13 +754,17 @@
           <video
             controls
             playsinline
-            preload="metadata"
+            preload="none"
             poster="assets/img/solar-street-lights-video-poster.png"
             aria-label="Admoltech solar street-light project video"
           >
             <source src="img/VIDEO-1.mp4" type="video/mp4" />
             Your browser does not support embedded video.
           </video>
+          <div class="project-video-meta">
+            <span><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Documented Field Work</span>
+            <a href="portfolio.html">Explore More Projects <i class="flaticon-right-up" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
     </section>
@@ -777,14 +784,22 @@
               </div>
             </div>
           </div>
-          <form>
+          <form class="site-enquiry-form" action="contact.php" method="post">
+            <input type="hidden" name="form_source" value="Homepage expert advice">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="homepage-website">Leave this field empty</label>
+              <input id="homepage-website" type="text" name="company_website" tabindex="-1" autocomplete="off">
+            </div>
             <div class="inputbox">
-              <input type="email" name="email" placeholder="Email Address" />
+              <label class="visually-hidden" for="homepage-email">Email Address</label>
+              <input id="homepage-email" type="email" name="email" placeholder="Email Address" autocomplete="email" required />
             </div>
             <div class="textareabox">
-              <textarea placeholder="Message"></textarea>
+              <label class="visually-hidden" for="homepage-message">How can we help?</label>
+              <textarea id="homepage-message" name="message" placeholder="How can we help?" minlength="10" required></textarea>
             </div>
-            <button class="btn bk">Submit Now</button>
+            <button type="submit" class="btn bk">Send Enquiry</button>
+            <div class="contact-form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
         <div class="heading">
@@ -869,16 +884,13 @@
                 <div class="research-analysis">
                   <h3>Project Planning</h3>
                   <p>
-                    Every system is carefully sized, professionally installed
-                    and supported to deliver dependable power in Nigerian
-                    conditions.
+                    We begin with the site, the operational requirement and
+                    the conditions the completed system must handle.
                   </p>
                   <ul class="list-style">
-                    <li>System sizing based on a detailed energy assessment</li>
-                    <li>Quality components selected for Nigerian conditions</li>
-                    <li>
-                      Professional installation with ongoing technical support
-                    </li>
+                    <li>Site inspection and requirement review</li>
+                    <li>Technical scope matched to the intended use</li>
+                    <li>Clear delivery priorities and project coordination</li>
                   </ul>
                   <span>.1</span>
                 </div>
@@ -913,16 +925,13 @@
                 <div class="research-analysis">
                   <h3>Research &amp; Analysis</h3>
                   <p>
-                    Every system is carefully sized, professionally installed
-                    and supported to deliver dependable power in Nigerian
-                    conditions.
+                    Suitable materials, equipment and delivery methods are
+                    selected around the approved project scope.
                   </p>
                   <ul class="list-style">
-                    <li>System sizing based on a detailed energy assessment</li>
-                    <li>Quality components selected for Nigerian conditions</li>
-                    <li>
-                      Professional installation with ongoing technical support
-                    </li>
+                    <li>Equipment and material suitability checks</li>
+                    <li>Site-specific safety and execution planning</li>
+                    <li>Procurement and programme coordination</li>
                   </ul>
                   <span>.2</span>
                 </div>
@@ -957,16 +966,13 @@
                 <div class="research-analysis">
                   <h3>Installation &amp; Maintenance</h3>
                   <p>
-                    Every system is carefully sized, professionally installed
-                    and supported to deliver dependable power in Nigerian
-                    conditions.
+                    Field work is coordinated professionally, followed by clear
+                    handover and accessible technical support.
                   </p>
                   <ul class="list-style">
-                    <li>System sizing based on a detailed energy assessment</li>
-                    <li>Quality components selected for Nigerian conditions</li>
-                    <li>
-                      Professional installation with ongoing technical support
-                    </li>
+                    <li>Professional installation and site supervision</li>
+                    <li>Quality review before project handover</li>
+                    <li>Maintenance guidance and after-delivery support</li>
                   </ul>
                   <span>.3</span>
                 </div>
@@ -1007,7 +1013,7 @@
                     alt="Admol solar energy project"
                     class="bolt-img"
                   />
-                  <a href="portfolio-single.html"
+                  <a href="portfolio-single.html" aria-label="View the Tudun Wada solar project"
                     ><i class="flaticon-right-up"></i
                   ></a>
                 </div>
@@ -1034,11 +1040,11 @@
                     alt="Admol solar energy project"
                     class="bolt-img"
                   />
-                  <a href="road-construction-abuja.html"
+                  <a href="road-project-essien-udim.html" aria-label="View the Essien Udim road project"
                     ><i class="flaticon-right-up"></i
                   ></a>
                 </div>
-                <a href="road-construction-abuja.html">Road Construction</a>
+                <a href="road-project-essien-udim.html">Road Construction</a>
                 <h5>Essien Udim, Akwa Ibom</h5>
                 <span>Asphalt paving and civil works</span>
               </div>
@@ -1061,11 +1067,11 @@
                     alt="Admol solar energy project"
                     class="bolt-img"
                   />
-                  <a href="general-contracting-abuja.html"
+                  <a href="electrical-project-ife.html" aria-label="View the Ife electrical project"
                     ><i class="flaticon-right-up"></i
                   ></a>
                 </div>
-                <a href="general-contracting-abuja.html">Electrical Installation</a>
+                <a href="electrical-project-ife.html">Electrical Installation</a>
                 <h5>Ife, Osun</h5>
                 <span>Transformer and distribution works</span>
               </div>
@@ -1088,11 +1094,11 @@
                     alt="Admol solar energy project"
                     class="bolt-img"
                   />
-                  <a href="solar-powered-boreholes-abuja.html"
+                  <a href="borehole-project-dushekoro.html" aria-label="View the Dushekoro borehole project"
                     ><i class="flaticon-right-up"></i
                   ></a>
                 </div>
-                <a href="solar-powered-boreholes-abuja.html">Solar-Powered Borehole</a>
+                <a href="borehole-project-dushekoro.html">Solar-Powered Borehole</a>
                 <h5>Dushekoro, FCT</h5>
                 <span>Water-storage and solar pumping infrastructure</span>
               </div>
@@ -1156,312 +1162,22 @@
         </div>
       </div>
     </section>
-    <section
-      class="section-customer"
-      style="background-image: url(assets/img/customer-background.png)"
-    >
+    <section class="trust-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="heading two">
-              <img
-                loading="lazy"
-                decoding="async"
-                src="assets/img/heading-img-two.png"
-                alt="Admol solar energy project"
-              /><span>Client’s Reviews &amp; Testimonials</span>
-              <h2>What Our Customers Are Saying About Us</h2>
-            </div>
-            <div class="nav-c-slider">
-              <a
-                class="next-slide nav-active"
-                href="JavaScript:void(0)"
-                data-slide="1"
-              >
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-6.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="2">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-1.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="3">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-2.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="4">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-3.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="5">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-4.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="6">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-5.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="7">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-6.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-
-              <a class="next-slide" href="JavaScript:void(0)" data-slide="8">
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  class="animate__animated animate__fadeIn"
-                  src="img/PHOTO-1.jpg"
-                  alt="Admol solar energy project"
-                />
-              </a>
-            </div>
-            <div class="customer">
-              <h5>customer satisfaction is very important to us</h5>
-              <ul class="star">
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="c-slider">
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  Admoltech Services Ltd. transformed our home. We no longer
-                  worry about power outages, and our electricity bills have
-                  dropped significantly. Highly professional team!
-                </p>
-                <ul>
-                  <li><h3>Chidi Eze</h3></li>
-                  <li><h5>Homeowner in Abuja</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  The inverter system installed by Admol is seamless. My
-                  business stays running without the noise and cost of a diesel
-                  generator.
-                </p>
-                <ul>
-                  <li><h3>Mrs. Bola Ahmed</h3></li>
-                  <li><h5>Business Owner</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  Excellent after-sales support. They did not just install and
-                  leave; they have been helpful with maintenance guidance.
-                </p>
-                <ul>
-                  <li><h3>Engr. Samuel Okon</h3></li>
-                  <li><h5>Industrial Plant Manager</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  Admoltech Services Ltd. transformed our home. We no longer
-                  worry about power outages, and our electricity bills have
-                  dropped significantly. Highly professional team!
-                </p>
-                <ul>
-                  <li><h3>Chidi Eze</h3></li>
-                  <li><h5>Homeowner in Abuja</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  The inverter system installed by Admol is seamless. My
-                  business stays running without the noise and cost of a diesel
-                  generator.
-                </p>
-                <ul>
-                  <li><h3>Mrs. Bola Ahmed</h3></li>
-                  <li><h5>Business Owner</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  Excellent after-sales support. They did not just install and
-                  leave; they have been helpful with maintenance guidance.
-                </p>
-                <ul>
-                  <li><h3>Engr. Samuel Okon</h3></li>
-                  <li><h5>Industrial Plant Manager</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  Admoltech Services Ltd. transformed our home. We no longer
-                  worry about power outages, and our electricity bills have
-                  dropped significantly. Highly professional team!
-                </p>
-                <ul>
-                  <li><h3>Chidi Eze</h3></li>
-                  <li><h5>Homeowner in Abuja</h5></li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  src="assets/img/double-quote.png"
-                  alt="Admol solar energy project"
-                />
-                <p>
-                  The inverter system installed by Admol is seamless. My
-                  business stays running without the noise and cost of a diesel
-                  generator.
-                </p>
-                <ul>
-                  <li><h3>Mrs. Bola Ahmed</h3></li>
-                  <li><h5>Business Owner</h5></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="heading">
+          <img loading="lazy" decoding="async" src="assets/img/heading-img.png" alt="" aria-hidden="true">
+          <span>Why Choose Admoltech</span>
+          <h2>Clear Planning. Professional Execution. Ongoing Support.</h2>
+          <p>We focus on the fundamentals that help energy, water, security and infrastructure projects succeed.</p>
         </div>
+        <div class="trust-grid">
+          <article class="trust-card"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i><h3>Accountable Delivery</h3><p>Registered company processes, clear project scope and practical coordination from assessment to handover.</p></article>
+          <article class="trust-card"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><h3>Technical Capability</h3><p>Installation experience across solar, electrical, water, security and supporting civil works.</p></article>
+          <article class="trust-card"><i class="fa-solid fa-headset" aria-hidden="true"></i><h3>Responsive Support</h3><p>Accessible guidance before installation and continued technical support after project delivery.</p></article>
+        </div>
+        <div class="trust-cta"><a class="btn" href="contact.html">Discuss Your Project</a></div>
       </div>
     </section>
-    <div class="container gap no-top">
-      <div class="swiper clients-slider">
-        <div class="swiper-wrapper">
-          <div class="partner swiper-slide">
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="clients-logo"
-              src="img/PHOTO-2.jpg"
-            />
-          </div>
-          <div class="partner swiper-slide">
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="clients-logo"
-              src="img/PHOTO-3.jpg"
-            />
-          </div>
-          <div class="partner swiper-slide">
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="clients-logo"
-              src="img/PHOTO-4.jpg"
-            />
-          </div>
-          <div class="partner swiper-slide">
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="clients-logo"
-              src="img/PHOTO-5.jpg"
-            />
-          </div>
-          <div class="partner swiper-slide">
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="clients-logo"
-              src="img/PHOTO-6.jpg"
-            />
-          </div>
-          <div class="partner swiper-slide">
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="clients-logo"
-              src="img/PHOTO-1.jpg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
     <footer
       class="admol-footer"
       style="background-image: url(assets/img/footer-line.png)"
@@ -1531,7 +1247,7 @@
     </footer>
 
     <!-- progress -->
-    <div id="progress">
+    <div id="progress" role="button" tabindex="0" aria-label="Back to top">
       <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
     </div>
     <!-- search-popup -->
