@@ -147,6 +147,31 @@ img {
   overflow: hidden;
 }
 
+.project-img figure > img.project-image-top {
+  object-position: center top;
+}
+
+.our-projects .project-gallery-heading {
+  max-width: 780px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.our-projects .project-gallery-heading p {
+  margin: 16px auto 0;
+  color: #5a6470;
+  font-size: 18px;
+}
+
+.our-projects .row {
+  row-gap: 46px;
+}
+
+.our-projects .projects {
+  height: 100%;
+  margin-bottom: 0;
+}
+
 .blog-img figure {
   height: 300px;
   overflow: hidden;
