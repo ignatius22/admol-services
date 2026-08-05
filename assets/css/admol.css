@@ -921,6 +921,311 @@ header a[aria-current="page"] { color: var(--admol-blue); }
   margin-top: 12px;
 }
 
+/* Unified industrial card language inherited from the Bolt template. */
+.services,
+.projects,
+.solar-farm,
+.service-benefits li,
+.service-process-step,
+.related-service-card,
+.content-page-info,
+.content-page form#contact-form {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.services {
+  border-color: #999;
+  transition: color .35s ease, background-color .35s ease, border-color .35s ease, transform .35s ease;
+}
+
+.services::before {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 46px solid #eef0f2;
+  border-left: 46px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+.services::after,
+.projects::after,
+.solar-farm::after,
+.service-benefits li::after,
+.service-process-step::after,
+.related-service-card::after,
+.content-page-info::after,
+.content-page form#contact-form::after {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 10px;
+  height: 10px;
+  background: #999;
+  content: "";
+  transition: background-color .35s ease;
+}
+
+.services:hover {
+  border-color: var(--admol-navy);
+  background: var(--admol-navy);
+  box-shadow: none;
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+.services:hover::before {
+  width: 0;
+  height: 0;
+  border-top-color: var(--admol-yellow);
+  background: transparent;
+}
+
+.services:hover::after,
+.projects:hover::after,
+.solar-farm:hover::after,
+.service-process-step:hover::after,
+.related-service-card:hover::after,
+.content-page-info:hover::after {
+  background: var(--admol-yellow);
+}
+
+.services:hover h3 a,
+.services:hover p {
+  color: #fff;
+}
+
+.services:hover > i {
+  outline-color: var(--admol-green);
+  background: var(--admol-yellow);
+  color: var(--admol-navy);
+}
+
+.projects {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 26px;
+  border: 1px solid #999;
+  background: #fff;
+  transition: border-color .35s ease, transform .35s ease;
+}
+
+.projects > a,
+.projects > h5,
+.projects > span {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.projects > a {
+  padding-top: 22px;
+}
+
+.projects:hover {
+  border-color: var(--admol-green);
+  transform: translateY(-8px);
+}
+
+.project-img > a {
+  width: 62px;
+  height: 62px;
+  border-radius: 0;
+}
+
+.fun-facts {
+  overflow: visible;
+  border-color: #999;
+  box-shadow: none;
+  transition: color .35s ease, background-color .35s ease, transform .35s ease;
+}
+
+.fun-facts::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 38px solid #eef0f2;
+  border-left: 38px solid transparent;
+  content: "";
+}
+
+.fun-facts:hover {
+  background: var(--admol-navy);
+  box-shadow: none;
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+.fun-facts:hover h2,
+.fun-facts:hover span {
+  color: #fff;
+}
+
+.fun-facts:hover i {
+  background: var(--admol-green);
+  color: #fff;
+}
+
+.solar-farm {
+  position: relative;
+  min-height: 116px;
+  padding-left: 30px;
+  border-color: #999;
+  border-left: 7px solid var(--admol-green);
+  background: #fff;
+  transition: color .35s ease, background-color .35s ease, transform .35s ease;
+}
+
+.solar-farm:hover {
+  background: var(--admol-navy);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.solar-farm:hover h5 {
+  color: var(--admol-yellow);
+}
+
+.solar-farm:hover h6 {
+  color: #fff;
+}
+
+.service-detail-image {
+  position: relative;
+  border: 1px solid #999;
+  border-radius: 0;
+  box-shadow: 14px 14px 0 rgba(117, 184, 63, .2);
+}
+
+.service-benefits li {
+  border-color: #999;
+  border-left: 5px solid var(--admol-green);
+}
+
+.service-benefits li::after {
+  width: 7px;
+  height: 7px;
+  right: 6px;
+  bottom: 6px;
+}
+
+.service-process-grid,
+.related-service-grid {
+  gap: 28px;
+}
+
+.service-process-step,
+.related-service-card {
+  position: relative;
+  border-color: #999;
+  transition: color .35s ease, background-color .35s ease, border-color .35s ease, transform .35s ease;
+}
+
+.service-process-step {
+  margin-top: 34px;
+  padding-top: 58px;
+}
+
+.service-process-step strong {
+  position: absolute;
+  top: -34px;
+  left: 28px;
+  display: grid;
+  width: 68px;
+  height: 68px;
+  margin: 0;
+  place-items: center;
+  background: var(--admol-yellow);
+  color: var(--admol-navy);
+  font-size: 25px;
+  outline: 5px solid #fff;
+}
+
+.related-service-card {
+  border-top: 6px solid var(--admol-green);
+}
+
+.service-process-step:hover,
+.related-service-card:hover {
+  border-color: var(--admol-navy);
+  background: var(--admol-navy);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.service-process-step:hover h3,
+.service-process-step:hover p,
+.related-service-card:hover h3,
+.related-service-card:hover p,
+.related-service-card:hover a {
+  color: #fff;
+}
+
+.service-process-step:hover strong {
+  background: var(--admol-green);
+  color: #fff;
+}
+
+.service-cta {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--admol-navy);
+  border-radius: 0;
+}
+
+.service-cta::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 80px solid var(--admol-yellow);
+  border-left: 80px solid transparent;
+  content: "";
+}
+
+.content-page-info,
+.content-page form#contact-form {
+  position: relative;
+}
+
+.content-page-info {
+  transition: color .35s ease, background-color .35s ease;
+}
+
+.content-page-info:hover {
+  background: var(--admol-navy);
+  color: #fff;
+}
+
+.content-page-info:hover h3,
+.content-page-info:hover h5,
+.content-page-info:hover a {
+  color: #fff;
+}
+
+.content-page form#contact-form {
+  border: 1px solid #999;
+  border-top: 7px solid var(--admol-green);
+  background: #f2f2f2;
+}
+
+.delivery-stage {
+  position: relative;
+  padding: 15px 14px 15px 18px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-left: 6px solid var(--admol-yellow);
+  background: rgba(7, 29, 53, .22);
+}
+
 @media (max-width: 991px) {
   .service-detail-intro {
     grid-template-columns: 1fr;
