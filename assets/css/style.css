@@ -1533,9 +1533,13 @@ form textarea {
     border: 0;
 }
 #v-pills-tab {
-    display: ruby-text;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
     width: 100%;
     text-align: center;
+    margin-top: 16px;
     margin-bottom: 70px;
 }
 .nav-pills .nav-link.active {

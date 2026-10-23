@@ -441,8 +441,27 @@ img {
   font-weight: 800;
 }
 
+#v-pills-tab {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  margin: 16px 0 70px !important;
+}
+
+#v-pills-tab .nav-link {
+  margin: 0 !important;
+}
+
 .tab-img > img:first-child {
   height: 434px;
+}
+
+.tab-img img.bolt-img {
+  top: 0;
 }
 
 .project-img figure {
