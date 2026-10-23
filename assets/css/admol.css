@@ -1226,6 +1226,181 @@ header a[aria-current="page"] { color: var(--admol-blue); }
   background: rgba(7, 29, 53, .22);
 }
 
+.media-presence-block {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 72px auto 0;
+}
+
+.about-media-presence {
+  max-width: 100%;
+  margin: 0 auto 72px;
+}
+
+.media-presence-header {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.media-presence-header > span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--admol-green);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.media-presence-header h3 {
+  margin-bottom: 12px;
+  color: #111;
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 800;
+}
+
+.media-presence-header p {
+  margin: 0;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.media-presence-grid {
+  row-gap: 28px;
+}
+
+.media-feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #999;
+  border-top: 6px solid var(--admol-green);
+  border-radius: 0;
+  background: #fff;
+  transition: border-color .35s ease, transform .35s ease, background-color .35s ease, color .35s ease;
+}
+
+.media-feature-card::after {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 10px;
+  height: 10px;
+  background: #999;
+  content: "";
+  transition: background-color .35s ease;
+}
+
+.media-feature-card:hover {
+  border-color: var(--admol-navy);
+  background: var(--admol-navy);
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+.media-feature-card:hover::after {
+  background: var(--admol-yellow);
+}
+
+.media-feature-frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--admol-navy);
+}
+
+.media-feature-frame video,
+.media-feature-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.billboard-feature-card .media-feature-frame img {
+  object-position: center 36%;
+  transition: transform .4s ease;
+}
+
+.billboard-feature-card:hover .media-feature-frame img {
+  transform: scale(1.03);
+}
+
+.media-badge {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--admol-navy);
+  border-left: 4px solid var(--admol-yellow);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.media-badge i {
+  color: var(--admol-yellow);
+}
+
+.media-feature-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px 26px 28px;
+}
+
+.media-feature-body h4 {
+  margin-bottom: 10px;
+  color: #111;
+  font-size: 21px;
+  font-weight: 800;
+  transition: color .35s ease;
+}
+
+.media-feature-body p {
+  margin: 0;
+  color: #4d4d4d;
+  font-size: 15.5px;
+  line-height: 1.65;
+  transition: color .35s ease;
+}
+
+.media-feature-card:hover .media-feature-body h4 {
+  color: var(--admol-yellow);
+}
+
+.media-feature-card:hover .media-feature-body p {
+  color: #dbe7f2;
+}
+
+.contact-presence-row {
+  margin-top: 90px;
+  row-gap: 28px;
+}
+
+.contact-presence-row .mapouter,
+.contact-presence-row .mapouter iframe {
+  height: 100%;
+  min-height: 460px;
+  margin-top: 0;
+}
+
+.contact-billboard-card .media-feature-frame img {
+  aspect-ratio: 16 / 10;
+  object-position: center 36%;
+}
+
 @media (max-width: 991px) {
   .service-detail-intro {
     grid-template-columns: 1fr;
@@ -1255,6 +1430,11 @@ header a[aria-current="page"] { color: var(--admol-blue); }
   .project-video-frame::before { top: -14px; left: -14px; width: 58px; height: 58px; }
   .project-video-meta { min-height: 0; align-items: flex-start; flex-direction: column; gap: 14px; padding: 18px 14px 16px; font-size: 13px; }
   .project-video-meta a { width: 100%; justify-content: space-between; }
+  .media-presence-block { margin-top: 52px; }
+  .about-media-presence { margin-bottom: 52px; }
+  .contact-presence-row { margin-top: 52px; }
+  .contact-presence-row .mapouter,
+  .contact-presence-row .mapouter iframe { min-height: 360px; }
   .whatsapp-float { right: 14px; bottom: 76px; width: 46px; height: 46px; font-size: 23px; }
   #progress { right: 12px; bottom: 14px; width: 48px; height: 48px; }
   .home-page .hero-section-one .hero-img img { opacity: .18; transform: scale(.72); }
