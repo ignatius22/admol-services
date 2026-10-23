@@ -1317,12 +1317,12 @@ header a[aria-current="page"] { color: var(--admol-blue); }
 .media-feature-frame img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
 .billboard-feature-card .media-feature-frame img {
-  object-position: center 36%;
+  object-position: center 28%;
   transition: transform .4s ease;
 }
 
@@ -1397,8 +1397,8 @@ header a[aria-current="page"] { color: var(--admol-blue); }
 }
 
 .contact-billboard-card .media-feature-frame img {
-  aspect-ratio: 16 / 10;
-  object-position: center 36%;
+  aspect-ratio: 4 / 3;
+  object-position: center 28%;
 }
 
 @media (max-width: 991px) {
